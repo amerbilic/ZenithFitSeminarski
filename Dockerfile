@@ -10,5 +10,6 @@ RUN dotnet publish "ZenithFit.WebAPI" -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
+ADD ./ZenithFit.WebAPI/Helpers ./Helpers
 
 ENTRYPOINT ["dotnet", "ZenithFit.WebAPI.dll"]

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,13 +30,13 @@ namespace ZenithFit.WebAPI.Database
             new Manufacturers() { ManufacturerName = "RedWeiller", ManufacturerId = 4 });
 
             modelBuilder.Entity<Articles>().HasData(
-            new Articles() { ArticleName = "Protein1", ArticleCode = "2314", ArticleId = 1, ArticlePrice = 300, ArticleStatus = true, CategoryId = 1, ManufacturerId = 1 },
-            new Articles() { ArticleName = "Protein2", ArticleCode = "2312541", ArticleId = 2, ArticlePrice = 321, ArticleStatus = true, CategoryId = 1, ManufacturerId = 1 },
-            new Articles() { ArticleName = "Weight3", ArticleCode = "42312", ArticleId = 3, ArticlePrice = 232, ArticleStatus = true, CategoryId = 2, ManufacturerId = 2 },
-            new Articles() { ArticleName = "Weight2", ArticleCode = "23121", ArticleId = 4, ArticlePrice = 664, ArticleStatus = true, CategoryId = 2, ManufacturerId = 2 },
-            new Articles() { ArticleName = "Random3", ArticleCode = "5675", ArticleId = 5, ArticlePrice = 213, ArticleStatus = true, CategoryId = 3, ManufacturerId = 2 },
-            new Articles() { ArticleName = "Item7", ArticleCode = "756543", ArticleId = 6, ArticlePrice = 421, ArticleStatus = true, CategoryId = 3, ManufacturerId = 3 },
-            new Articles() { ArticleName = "Something3", ArticleCode = "123115", ArticleId = 7, ArticlePrice = 122, ArticleStatus = true, CategoryId = 3, ManufacturerId = 4 });
+            new Articles() { ArticleName = "Protein1", ArticleCode = "2314", ArticleId = 1, ArticlePrice = 300, ArticleStatus = true, CategoryId = 1, ManufacturerId = 1, ArticlePicture = File.ReadAllBytes("Helpers/template.jpg"),ArticlePictureThumb = File.ReadAllBytes("Helpers/template2.jpg")},
+            new Articles() { ArticleName = "Protein2", ArticleCode = "2312541", ArticleId = 2, ArticlePrice = 321, ArticleStatus = true, CategoryId = 1, ManufacturerId = 1, ArticlePicture = File.ReadAllBytes("Helpers/template.jpg"), ArticlePictureThumb = File.ReadAllBytes("Helpers/template2.jpg") },
+            new Articles() { ArticleName = "Weight3", ArticleCode = "42312", ArticleId = 3, ArticlePrice = 232, ArticleStatus = true, CategoryId = 2, ManufacturerId = 2, ArticlePicture = File.ReadAllBytes("Helpers/template.jpg"), ArticlePictureThumb = File.ReadAllBytes("Helpers/template2.jpg") },
+            new Articles() { ArticleName = "Weight2", ArticleCode = "23121", ArticleId = 4, ArticlePrice = 664, ArticleStatus = true, CategoryId = 2, ManufacturerId = 2, ArticlePicture = File.ReadAllBytes("Helpers/template.jpg"), ArticlePictureThumb = File.ReadAllBytes("Helpers/template2.jpg") },
+            new Articles() { ArticleName = "Random3", ArticleCode = "5675", ArticleId = 5, ArticlePrice = 213, ArticleStatus = true, CategoryId = 3, ManufacturerId = 2, ArticlePicture = File.ReadAllBytes("Helpers/template.jpg"), ArticlePictureThumb = File.ReadAllBytes("Helpers/template2.jpg") },
+            new Articles() { ArticleName = "Item7", ArticleCode = "756543", ArticleId = 6, ArticlePrice = 421, ArticleStatus = true, CategoryId = 3, ManufacturerId = 3, ArticlePicture = File.ReadAllBytes("Helpers/template.jpg"), ArticlePictureThumb = File.ReadAllBytes("Helpers/template2.jpg") },
+            new Articles() { ArticleName = "Something3", ArticleCode = "123115", ArticleId = 7, ArticlePrice = 122, ArticleStatus = true, CategoryId = 3, ManufacturerId = 4, ArticlePicture = File.ReadAllBytes("Helpers/template.jpg"), ArticlePictureThumb = File.ReadAllBytes("Helpers/template2.jpg") });
 
             modelBuilder.Entity<Clients>().HasData(
             new Clients() { ClientId = 1, ClientFirstName = "Amer", ClientLastName = "Bilic", ClientRegisterDate = DateTime.Now.AddDays(-5), ClientEmail = "testing1@email.com", ClientPhone = "1233455", ClientUsername = "mobile", PasswordHash = "qEkPhwY9P2FiDqx1Rgg26GoapxE=", PasswordSalt = "fVZy3b4Z1cvYNep/oXc7aA==" },
