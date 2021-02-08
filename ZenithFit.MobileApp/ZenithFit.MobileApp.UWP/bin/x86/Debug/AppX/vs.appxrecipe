@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-02-08T19:07:05.978</Modified>
+      <Modified>2021-02-08T23:36:48.417</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp.UWP\bin\x86\Debug\ZenithFit.MobileApp.UWP.exe">
       <PackagePath>entrypoint\ZenithFit.MobileApp.UWP.exe</PackagePath>
-      <Modified>2021-02-08T19:07:03.423</Modified>
+      <Modified>2021-02-08T23:36:46.778</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\.nuget\packages\acr.userdialogs\7.1.0.470\lib\uap10.0.16299\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
@@ -120,7 +120,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp\bin\Debug\netstandard2.0\ZenithFit.MobileApp.dll">
       <PackagePath>ZenithFit.MobileApp.dll</PackagePath>
-      <Modified>2021-02-08T23:27:00.384</Modified>
+      <Modified>2021-02-08T23:36:41.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp\bin\Debug\netstandard2.0\ZenithFit.Model.dll">
       <PackagePath>ZenithFit.Model.dll</PackagePath>
@@ -299,11 +299,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-02-08T19:07:03.328</Modified>
+      <Modified>2021-02-08T23:36:46.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-02-08T19:07:03.328</Modified>
+      <Modified>2021-02-08T23:36:46.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -323,7 +323,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp.UWP\bin\x86\Debug\Core\ZenithFit.MobileApp.UWP.exe">
       <PackagePath>ZenithFit.MobileApp.UWP.exe</PackagePath>
-      <Modified>2021-02-08T19:07:05.973</Modified>
+      <Modified>2021-02-08T23:36:48.412</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

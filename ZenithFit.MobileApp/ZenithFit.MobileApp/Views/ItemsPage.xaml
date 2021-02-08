@@ -11,11 +11,12 @@
         <viewModels:ItemsViewModel />
     </ContentPage.BindingContext>
     <ContentPage.BackgroundColor>
-        <Color>Gray</Color>
+        <Color>Indigo</Color>
     </ContentPage.BackgroundColor>
     <StackLayout>
-        <Label TextColor="White" Text="PREPORUČENE USLUGE" FontSize="25" FontAttributes="Bold" 
+        <Label TextColor="White" Text="Welcome to ZenithFit" FontSize="25" FontAttributes="Bold" 
                HorizontalOptions="CenterAndExpand"/>
+        <Label TextColor="White" Text="Please use the menu to navigate" FontSize="15" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
     </StackLayout>
 
 </ContentPage>

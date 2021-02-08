@@ -52,7 +52,7 @@
 
             <StackLayout IsVisible="{Binding NotRated}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
 
-                <Label  HorizontalOptions="Center">Ocijeni artikal:</Label>
+                <Label  HorizontalOptions="Center">Rate the article:</Label>
                 <Grid HorizontalOptions="Center" VerticalOptions="Center">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="35" ></RowDefinition>
@@ -76,11 +76,7 @@
                 <RelativeLayout Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="EndAndExpand" HeightRequest="150" Margin="10" >
                     <Label HorizontalOptions="Start" VerticalOptions="EndAndExpand">Recommended articles:</Label>
                     <ListView ItemsSource="{Binding RecommenderList}" ItemSelected="recommendedArticlesList_ItemSelected"  x:Name="recommendedArticlesList" VerticalScrollBarVisibility="Default"
-                      HasUnevenRows="True" SeparatorVisibility="None" Margin="0,33,0,0" Rotation="270" RowHeight="150"
-                      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-70}"
-                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.5, Constant=70}"
-                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Constant=140}"
-                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+                      HasUnevenRows="True" SeparatorVisibility="None" Margin="0,33,0,0" Rotation="270" RowHeight="150">
                         <ListView.ItemTemplate>
                             <DataTemplate >
                                 <ViewCell  IsEnabled="False">

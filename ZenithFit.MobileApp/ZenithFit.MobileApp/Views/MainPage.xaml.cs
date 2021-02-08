@@ -39,6 +39,12 @@ namespace ZenithFit.MobileApp.Views
                     case (int)MenuItemType.Orders:
                         MenuPages.Add(id, new NavigationPage(new OrdersPage()));
                         break;
+                    case (int)MenuItemType.OrderHistory:
+                        MenuPages.Add(id, new NavigationPage(new OrderHistoryPage()));
+                        break;
+                    case (int)MenuItemType.Goals:
+                        MenuPages.Add(id, new NavigationPage(new GoalsPage()));
+                        break;
                 }
             }
 
