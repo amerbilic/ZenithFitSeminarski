@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:ZenithFit.MobileApp.ViewModels"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ZenithFit.MobileApp.Views.OrdersPage">
+    <ContentPage.BindingContext>
+        <viewModels:OrdersViewModel></viewModels:OrdersViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Current Order"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="25" FontAttributes="Bold"/>
+            <ListView ItemsSource="{Binding OrderList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Article.ArticleName}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontSize="16"/>
+                                    <Label Text="{Binding ArticleCode}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="13"/>
+                                    <Label Text="{Binding ArticlePrice, StringFormat='Price: {0} KM'}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontSize="16"/>
+                                    <Button Text="+1" Command="{Binding IncreaseQuantity}"></Button>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Vertical" Padding="10" Margin="0">
+                <Label x:Name="lblArticleAmount" Text="{Binding ArticleAmount,StringFormat='Article amount: {0}'}" FontSize="25" FontAttributes="Italic"></Label>
+                <Label x:Name="lblValue" Text="{Binding Value,StringFormat='Amount: {0} KM'}" FontSize="26" FontAttributes="Italic"></Label>
+                <Button x:Name="Finish" Text="Finish order" Clicked="Finish_Clicked" ></Button>
+                <Button x:Name="Cancel" Text="Cancel order"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

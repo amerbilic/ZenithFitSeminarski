@@ -1,0 +1,11 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZenithFit.Model.Requests
+{
+    public class OrdersSearchRequest
+    {
+        public string OrderNumber { get; set; }
+    }
+}

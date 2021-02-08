@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:ZenithFit.MobileApp.ViewModels"
+             x:Class="ZenithFit.MobileApp.Views.LoginPage">
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="10" VerticalOptions ="CenterAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#33ffffff">
+            <Label Text="Username:"/>
+            <Entry Placeholder="Username" x:Name ="Username" Text="{Binding Username}"></Entry>
+            
+            <Label Text="Password:"/>
+            <Entry Placeholder="******" x:Name ="Password" Text="{Binding Password}"></Entry>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+
+                <Button Text="Register" Clicked="Button_Clicked"></Button>
+                <Button Command="{Binding LoginCommand}" HorizontalOptions="FillAndExpand" Text="Login"></Button>
+            </StackLayout>
+            <Label IsVisible="{Binding IsBusy}" Text="Working..."></Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

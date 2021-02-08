@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:ZenithFit.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="ZenithFit.MobileApp.Views.OrderHistoryDetailsPage">
+    <ContentPage.BindingContext>
+        <viewModels:OrderHistoryDetailsViewModel></viewModels:OrderHistoryDetailsViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label Text="Order details"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="28"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <StackLayout Grid.Row="0" Grid.Column="1">
+                <Label Text="{Binding Order.OrderNumber}"  d:Text="{Binding .}" FontSize="15"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.Column="1">
+                <Label Text="{Binding Order.OrderDate}" d:Text="{Binding .}" FontSize="15" />
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="0">
+                <Label Text="Amount: " FontSize="18" FontAttributes="Bold"></Label>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="1">
+                <Label Text="{Binding Order.OrderPriceNoTax}" d:Text="Item descripton" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" />
+            </StackLayout>
+            <StackLayout Grid.Row="3" Grid.Column="0">
+                <Label Text="Amount with Tax: " FontSize="18" FontAttributes="Bold"></Label>
+            </StackLayout>
+            <StackLayout Grid.Row="3" Grid.Column="1">
+                <Label Text="{Binding Order.OrderPriceTax}" d:Text="Item descripton" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" />
+             <BoxView HorizontalOptions="FillAndExpand" HeightRequest="5" Color="Gray"></BoxView>
+            </StackLayout>
+            <Label Text="Order Details: " HorizontalTextAlignment="Start" FontAttributes="Bold" FontSize="22" />
+
+            <ListView ItemsSource="{Binding ObjectList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Row="0" Grid.Column="0">
+                                    <Label Text="Artikal:" FontSize="18" FontAttributes="Bold"></Label>
+                                </StackLayout>
+                                <StackLayout Grid.Row="0" Grid.Column="1">
+                                <Label Text="{Binding Name}" d:Text="{Binding .}" FontSize="16" />
+
+                                </StackLayout>
+                                <StackLayout Grid.Row="1" Grid.Column="0">
+                                <Label Text="Price: " FontSize="18" FontAttributes="Bold"></Label>
+                                </StackLayout>
+                                <StackLayout Grid.Row="1" Grid.Column="1">
+                                <Label Text="{Binding Price}" d:Text="{Binding .}"
+                                FontSize="16" />
+                                </StackLayout>
+                                <StackLayout Grid.Row="2" Grid.Column="0">
+                                    <Label Text="Amount: " FontSize="18" FontAttributes="Bold"></Label>
+                                </StackLayout>
+                                <StackLayout Grid.Row="2" Grid.Column="1">
+                                    <Label Text="{Binding Amount}" 
+                                d:Text="Item descripton"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="5" Color="Gray"></BoxView>
+                                </StackLayout>
+                            </Grid>
+
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

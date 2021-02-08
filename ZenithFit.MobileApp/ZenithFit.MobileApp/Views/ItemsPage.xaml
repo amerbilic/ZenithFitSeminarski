@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:ZenithFit.MobileApp.ViewModels;assembly=ZenithFit.MobileApp"
+             mc:Ignorable="d"
+             x:Class="ZenithFit.MobileApp.Views.ItemsPage"
+             x:Name="BrowseItemsPage">
+    <ContentPage.BindingContext>
+        <viewModels:ItemsViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.BackgroundColor>
+        <Color>Gray</Color>
+    </ContentPage.BackgroundColor>
+    <StackLayout>
+        <Label TextColor="White" Text="PREPORUČENE USLUGE" FontSize="25" FontAttributes="Bold" 
+               HorizontalOptions="CenterAndExpand"/>
+    </StackLayout>
+
+</ContentPage>

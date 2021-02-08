@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ZenithFit.MobileApp.ViewModels;assembly=ZenithFit.MobileApp"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ZenithFit.MobileApp.Converters"
+             mc:Ignorable="d"
+             x:Class="ZenithFit.MobileApp.Views.ArticlesPage">
+    <ContentPage.BindingContext>
+        <viewModels:ArticlesViewModel></viewModels:ArticlesViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImageConverter x:Key="imgConv"></local:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Articles"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Picker ItemsSource="{Binding CategoryList}" SelectedItem="{Binding SelectedCategory}" ItemDisplayBinding="{Binding CategoryName}"></Picker>
+            <ListView ItemsSource="{Binding ArticlesList}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="1,1,1,5" Padding="10" BackgroundColor="Indigo" Orientation="Horizontal">
+                                <StackLayout>
+                                    <Image Source="{Binding ArticlePicture, Converter={StaticResource imgConv}}"></Image>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding ArticleName}" 
+                                           d:Text="{Binding  .}"
+                                           LineBreakMode="NoWrap" 
+                                           Style="{DynamicResource ListItemTextStyle}" 
+                                           FontSize="16" />
+                                    <Label Text="{Binding ArticleCode}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"
+                                           FontSize="13"/>
+                                    <Label Text="{Binding ArticlePrice, StringFormat='Price: {0} KM'}"
+                                           d:Text="{Binding .}"
+                                           LineBreakMode="NoWrap"
+                                           Style="{DynamicResource ListItemTextStyle}"
+                                           FontSize="16"/>
+
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
