@@ -9,7 +9,7 @@ namespace ZenithFit.Model
         public int RatingID { get; set; }
         public int ArticleID { get; set; }
         public int ClientID { get; set; }
-        public int Rating { get; set; }
+        public int RatingGrade { get; set; }
         public DateTime RatingDate { get; set; }
 
     }

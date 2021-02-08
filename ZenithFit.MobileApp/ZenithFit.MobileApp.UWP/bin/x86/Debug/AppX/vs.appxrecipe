@@ -120,11 +120,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp\bin\Debug\netstandard2.0\ZenithFit.MobileApp.dll">
       <PackagePath>ZenithFit.MobileApp.dll</PackagePath>
-      <Modified>2021-02-08T20:20:50.965</Modified>
+      <Modified>2021-02-08T23:27:00.384</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp\bin\Debug\netstandard2.0\ZenithFit.Model.dll">
       <PackagePath>ZenithFit.Model.dll</PackagePath>
-      <Modified>2021-02-08T20:20:48.432</Modified>
+      <Modified>2021-02-08T23:26:24.406</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>

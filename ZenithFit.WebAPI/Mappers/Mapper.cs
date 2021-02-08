@@ -54,7 +54,6 @@ namespace ZenithFit.WebAPI.Mappers
             CreateMap<Database.Roles, Model.Roles>();
             //Ratings
             CreateMap<Database.Ratings, Model.Ratings>();
-            CreateMap<Database.Ratings, Model.Ratings>().ReverseMap();
             CreateMap<Database.Ratings, RatingsInsertRequest>().ReverseMap();
 
 

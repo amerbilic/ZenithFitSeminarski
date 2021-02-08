@@ -79,7 +79,7 @@ namespace ZenithFit.MobileApp.ViewModels
                 {
                     if(item2.ArticleID == item.ArticleID)
                     {
-                        amount += item2.Rating;
+                        amount += item2.RatingGrade;
                         total++;
                     }
                 }
@@ -108,7 +108,7 @@ namespace ZenithFit.MobileApp.ViewModels
             NotRated = !Rated;
             if(ArticleRatingsList.Count() != 0)
             {
-                AverageRating = ArticleRatingsList.Select(s => s.Rating).Average();
+                AverageRating = ArticleRatingsList.Select(s => s.RatingGrade).Average();
             }
             else
             {

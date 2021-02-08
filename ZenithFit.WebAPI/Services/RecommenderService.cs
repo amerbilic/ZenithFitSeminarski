@@ -84,9 +84,9 @@ namespace ZenithFit.WebAPI.Services
 
             for (int i=0;i<compoundRatings1.Count; i++)
             {
-                num1 += compoundRatings1[i].Rating * compoundRatings2[i].Rating;
-                num2 += compoundRatings1[i].Rating * compoundRatings1[i].Rating;
-                num3 += compoundRatings2[i].Rating * compoundRatings2[i].Rating;
+                num1 += compoundRatings1[i].RatingGrade * compoundRatings2[i].RatingGrade;
+                num2 += compoundRatings1[i].RatingGrade * compoundRatings1[i].RatingGrade;
+                num3 += compoundRatings2[i].RatingGrade * compoundRatings2[i].RatingGrade;
             }
 
             num2 = Math.Sqrt(num2);
@@ -122,7 +122,11 @@ namespace ZenithFit.WebAPI.Services
                 foreach(var item in ratinglist)
                 {
                     Model.Ratings newrating = new Model.Ratings();
-                    _mapper.Map(newrating, item);
+                    newrating.RatingDate = item.RatingDate;
+                    newrating.RatingGrade = item.RatingGrade;
+                    newrating.ArticleID = item.ArticleId;
+                    newrating.ClientID = item.ClientId;
+                    newrating.RatingID = item.RatingId;
 
                     ratings.Add(newrating);
                 }
