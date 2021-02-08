@@ -39,9 +39,9 @@ namespace ZenithFit.WebAPI.Database
 
             modelBuilder.Entity<Clients>().HasData(
             new Clients() { ClientId = 1, ClientFirstName = "Amer", ClientLastName = "Bilic", ClientRegisterDate = DateTime.Now.AddDays(-5), ClientEmail = "testing1@email.com", ClientPhone = "1233455", ClientUsername = "mobile", PasswordHash = "qEkPhwY9P2FiDqx1Rgg26GoapxE=", PasswordSalt = "fVZy3b4Z1cvYNep/oXc7aA==" },
-            new Clients() { ClientId = 1, ClientFirstName = "Denis", ClientLastName = "Bajrektarevic", ClientRegisterDate = DateTime.Now.AddDays(-5), ClientEmail = "testing2@email.com", ClientPhone = "312314", ClientUsername = "hajfo", PasswordHash = "r577PsUb6lkHEs32NUsQHbqEhqc=", PasswordSalt = "jpiaSiCqXBnw1z4lUnuRww==" },
-            new Clients() { ClientId = 1, ClientFirstName = "Ajdin", ClientLastName = "Muftic", ClientRegisterDate = DateTime.Now.AddDays(-5), ClientEmail = "testing3@email.com", ClientPhone = "4133211", ClientUsername = "zake123", PasswordHash = "ZnhzTGY3bXxC4FoYf7FEzHB+w/c=", PasswordSalt = "hx1Yw2OJcF/dQGfUKNhQgg==" },
-            new Clients() { ClientId = 1, ClientFirstName = "Beze", ClientLastName = "Kaljic", ClientRegisterDate = DateTime.Now.AddDays(-5), ClientEmail = "testing4@email.com", ClientPhone = "5141231", ClientUsername = "tarke321", PasswordHash = "r577PsUb6lkHEs32NUsQHbqEhqc=", PasswordSalt = "jpiaSiCqXBnw1z4lUnuRww==" });
+            new Clients() { ClientId = 2, ClientFirstName = "Denis", ClientLastName = "Bajrektarevic", ClientRegisterDate = DateTime.Now.AddDays(-5), ClientEmail = "testing2@email.com", ClientPhone = "312314", ClientUsername = "hajfo", PasswordHash = "r577PsUb6lkHEs32NUsQHbqEhqc=", PasswordSalt = "jpiaSiCqXBnw1z4lUnuRww==" },
+            new Clients() { ClientId = 3, ClientFirstName = "Ajdin", ClientLastName = "Muftic", ClientRegisterDate = DateTime.Now.AddDays(-5), ClientEmail = "testing3@email.com", ClientPhone = "4133211", ClientUsername = "zake123", PasswordHash = "ZnhzTGY3bXxC4FoYf7FEzHB+w/c=", PasswordSalt = "hx1Yw2OJcF/dQGfUKNhQgg==" },
+            new Clients() { ClientId = 4, ClientFirstName = "Beze", ClientLastName = "Kaljic", ClientRegisterDate = DateTime.Now.AddDays(-5), ClientEmail = "testing4@email.com", ClientPhone = "5141231", ClientUsername = "tarke321", PasswordHash = "r577PsUb6lkHEs32NUsQHbqEhqc=", PasswordSalt = "jpiaSiCqXBnw1z4lUnuRww==" });
 
 
             modelBuilder.Entity<Orders>().HasData(
@@ -57,7 +57,11 @@ namespace ZenithFit.WebAPI.Database
             new OrderDetails() { OrderDetailsId = 4, OrderId = 4, Amount = 11, Price = 23, Discount = 5, ArticleId = 2 });
 
             modelBuilder.Entity<Suppliers>().HasData(
-            new Suppliers() { SupplierId = 1, SupplierAddress = "Random address", SupplierBankAccount = "12315125", SupplierContact = "supcontact", SupplierEmail = "supplier1@email.com", SupplierName = "Supplier", SupplierNote = "He is a supplier", SupplierPhone = "12312541", SupplierStatus = true, SupplierWeb = "www.supplier.com" });
+            new Suppliers() { SupplierId = 1, SupplierAddress = "Random address", SupplierBankAccount = "12315125", SupplierContact = "supcontact", SupplierEmail = "supplier1@email.com", SupplierName = "Supplier", SupplierNote = "He is a supplier", SupplierPhone = "12312541", SupplierStatus = true, SupplierWeb = "www.supplier.com" },
+            new Suppliers() { SupplierId = 2, SupplierAddress = "Random address2", SupplierBankAccount = "123151254", SupplierContact = "supcontact2", SupplierEmail = "supplier2@email.com", SupplierName = "Supplier2", SupplierNote = "He is a supplier", SupplierPhone = "123125412", SupplierStatus = true, SupplierWeb = "www.supplier2.com" },
+            new Suppliers() { SupplierId = 3, SupplierAddress = "Random address3", SupplierBankAccount = "123151251", SupplierContact = "supcontact3", SupplierEmail = "supplier3@email.com", SupplierName = "Supplier3", SupplierNote = "He is a supplier", SupplierPhone = "123125413", SupplierStatus = true, SupplierWeb = "www.supplier22.com" },
+            new Suppliers() { SupplierId = 4, SupplierAddress = "Random address4", SupplierBankAccount = "123151252", SupplierContact = "supcontact4", SupplierEmail = "supplier4@email.com", SupplierName = "Supplier4", SupplierNote = "He is a supplier", SupplierPhone = "123125414", SupplierStatus = true, SupplierWeb = "www.supplier222.com" });
+
 
             modelBuilder.Entity<Procurements>().HasData(
            new Procurements() { ProcurementId = 1, ProcurementNumber = "2132152", ProcurementDate = DateTime.Now, ProcurementAccountAmount = 230, ProcurementTax = 5, ProcurementNote = "This is a procurement", WarehouseId = 1, UserId = 1, SupplierId = 1 },

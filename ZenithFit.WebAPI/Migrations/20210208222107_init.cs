@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ZenithFit.WebAPI.Migrations
 {
-    public partial class initial : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -441,6 +441,170 @@ namespace ZenithFit.WebAPI.Migrations
                         principalTable: "Procurements",
                         principalColumn: "ProcurementID",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Categories",
+                columns: new[] { "CategoryID", "CategoryName" },
+                values: new object[,]
+                {
+                    { 1, "Proteini" },
+                    { 2, "WeightGainer" },
+                    { 3, "Pre-workout" },
+                    { 4, "Fat-burner" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Clients",
+                columns: new[] { "ClientID", "ClientEmail", "ClientFirstName", "ClientLastName", "ClientPhone", "ClientRegisterDate", "ClientUsername", "PasswordHash", "PasswordSalt" },
+                values: new object[,]
+                {
+                    { 1, "testing1@email.com", "Amer", "Bilic", "1233455", new DateTime(2021, 2, 3, 23, 21, 6, 895, DateTimeKind.Local).AddTicks(6055), "mobile", "qEkPhwY9P2FiDqx1Rgg26GoapxE=", "fVZy3b4Z1cvYNep/oXc7aA==" },
+                    { 2, "testing2@email.com", "Denis", "Bajrektarevic", "312314", new DateTime(2021, 2, 3, 23, 21, 6, 898, DateTimeKind.Local).AddTicks(2302), "hajfo", "r577PsUb6lkHEs32NUsQHbqEhqc=", "jpiaSiCqXBnw1z4lUnuRww==" },
+                    { 3, "testing3@email.com", "Ajdin", "Muftic", "4133211", new DateTime(2021, 2, 3, 23, 21, 6, 898, DateTimeKind.Local).AddTicks(2397), "zake123", "ZnhzTGY3bXxC4FoYf7FEzHB+w/c=", "hx1Yw2OJcF/dQGfUKNhQgg==" },
+                    { 4, "testing4@email.com", "Beze", "Kaljic", "5141231", new DateTime(2021, 2, 3, 23, 21, 6, 898, DateTimeKind.Local).AddTicks(2405), "tarke321", "r577PsUb6lkHEs32NUsQHbqEhqc=", "jpiaSiCqXBnw1z4lUnuRww==" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Manufacturers",
+                columns: new[] { "ManufacturerID", "ManufacturerName" },
+                values: new object[,]
+                {
+                    { 1, "Olymp" },
+                    { 2, "MyProtein" },
+                    { 3, "IronMaxx" },
+                    { 4, "RedWeiller" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Roles",
+                columns: new[] { "RoleID", "RoleName", "RoleNote" },
+                values: new object[,]
+                {
+                    { 2, "Employee", "Employee" },
+                    { 1, "Admin", "Administrator" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Suppliers",
+                columns: new[] { "SupplierID", "SupplierAddress", "SupplierBankAccount", "SupplierContact", "SupplierEmail", "SupplierName", "SupplierNote", "SupplierPhone", "SupplierStatus", "SupplierWeb" },
+                values: new object[,]
+                {
+                    { 1, "Random address", "12315125", "supcontact", "supplier1@email.com", "Supplier", "He is a supplier", "12312541", true, "www.supplier.com" },
+                    { 2, "Random address2", "123151254", "supcontact2", "supplier2@email.com", "Supplier2", "He is a supplier", "123125412", true, "www.supplier2.com" },
+                    { 3, "Random address3", "123151251", "supcontact3", "supplier3@email.com", "Supplier3", "He is a supplier", "123125413", true, "www.supplier22.com" },
+                    { 4, "Random address4", "123151252", "supcontact4", "supplier4@email.com", "Supplier4", "He is a supplier", "123125414", true, "www.supplier222.com" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "UserID", "PasswordHash", "PasswordSalt", "UserEmail", "UserFirstName", "UserLastName", "UserPhone", "UserUsername" },
+                values: new object[,]
+                {
+                    { 1, "qEkPhwY9P2FiDqx1Rgg26GoapxE=", "fVZy3b4Z1cvYNep/oXc7aA==", "testing33@email.com", "Amer", "Hajfic", "3213215", "admin" },
+                    { 2, "qEkPhwY9P2FiDqx12gg26GoapxE=", "fVZy3b4Z1cvYNep/oXc7dA==", "testing333@email.com", "Denis", "Beso", "32132154", "denje" },
+                    { 3, "qEkPhwY9P2FiDqx17gg26GoapxE=", "fVZy3b4Z1cvYNep/oXc7wA==", "testing343@email.com", "Imad", "Spahic", "32132157", "samar" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Warehouses",
+                columns: new[] { "WarehouseID", "WarehouseAddress", "WarehouseName", "WarehouseNote" },
+                values: new object[,]
+                {
+                    { 1, "Address1", "Warehouse1", "This is a note" },
+                    { 2, "Address1", "Warehouse2", "This is a note" },
+                    { 3, "Address3", "Pre-Warehouse3", "This is a note" },
+                    { 4, "Address4", "Fat-Warehouse4", "This is a note" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Articles",
+                columns: new[] { "ArticleID", "ArticleCode", "ArticleName", "ArticlePicture", "ArticlePictureThumb", "ArticlePrice", "ArticleStatus", "CategoryID", "ManufacturerID" },
+                values: new object[,]
+                {
+                    { 1, "2314", "Protein1", null, null, 300m, true, 1, 1 },
+                    { 2, "2312541", "Protein2", null, null, 321m, true, 1, 1 },
+                    { 3, "42312", "Weight3", null, null, 232m, true, 2, 2 },
+                    { 4, "23121", "Weight2", null, null, 664m, true, 2, 2 },
+                    { 5, "5675", "Random3", null, null, 213m, true, 3, 2 },
+                    { 6, "756543", "Item7", null, null, 421m, true, 3, 3 },
+                    { 7, "123115", "Something3", null, null, 122m, true, 3, 4 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Orders",
+                columns: new[] { "OrderID", "ClientID", "OrderCancelled", "OrderDate", "OrderNumber", "OrderPriceNoTax", "OrderPriceTax", "OrderStatus", "UserID", "WarehouseID" },
+                values: new object[,]
+                {
+                    { 4, 3, false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "N00-212315463", 777m, 999m, true, 1, 3 },
+                    { 3, 2, false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "N00-212315444", 666m, 888m, true, 1, 2 },
+                    { 1, 1, false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "N00-212315412", 466m, 545m, true, 1, 1 },
+                    { 2, 1, false, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "N00-212315413", 555m, 777m, true, 1, 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Procurements",
+                columns: new[] { "ProcurementID", "ProcurementAccountAmount", "ProcurementDate", "ProcurementNote", "ProcurementNumber", "ProcurementTax", "SupplierID", "UserID", "WarehouseID" },
+                values: new object[,]
+                {
+                    { 3, 24m, new DateTime(2021, 2, 8, 23, 21, 6, 899, DateTimeKind.Local).AddTicks(7688), "This is a procurement2", "2132162", 5m, 2, 2, 2 },
+                    { 2, 23m, new DateTime(2021, 2, 8, 23, 21, 6, 899, DateTimeKind.Local).AddTicks(7603), "This is a procurement1", "2132132", 5m, 1, 1, 1 },
+                    { 4, 25m, new DateTime(2021, 2, 8, 23, 21, 6, 899, DateTimeKind.Local).AddTicks(7693), "This is a procurement3", "2132182", 5m, 3, 3, 3 },
+                    { 1, 230m, new DateTime(2021, 2, 8, 23, 21, 6, 899, DateTimeKind.Local).AddTicks(5496), "This is a procurement", "2132152", 5m, 1, 1, 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "UserRoles",
+                columns: new[] { "UserRoleID", "ChangeDate", "RoleID", "UserID" },
+                values: new object[,]
+                {
+                    { 3, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(8207), 2, 3 },
+                    { 1, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(7816), 1, 1 },
+                    { 2, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(8194), 2, 2 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "CompleteOrder",
+                columns: new[] { "CompleteOrderID", "ClientID", "CompleteOrderDate", "CompleteOrderSent", "OrderID", "UserID" },
+                values: new object[,]
+                {
+                    { 1, 1, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(3056), true, 1, 1 },
+                    { 2, 2, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(3973), true, 2, 2 },
+                    { 3, 3, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(4002), true, 3, 3 },
+                    { 4, 4, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(4006), true, 4, 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "OrderDetails",
+                columns: new[] { "OrderDetailsID", "Amount", "ArticleID", "Discount", "OrderID", "Price" },
+                values: new object[,]
+                {
+                    { 1, 7, 1, 5m, 1, 230m },
+                    { 2, 7, 1, 5m, 2, 777m },
+                    { 4, 11, 2, 5m, 4, 23m },
+                    { 3, 6, 3, 5m, 3, 66m }
+                });
+
+            migrationBuilder.InsertData(
+                table: "ProcurementDetails",
+                columns: new[] { "ProcurementDetailID", "Amount", "ArticleID", "Price", "ProcurementID" },
+                values: new object[,]
+                {
+                    { 1, 2, 1, 230m, 1 },
+                    { 2, 2, 3, 321m, 2 },
+                    { 3, 3, 2, 322m, 3 },
+                    { 4, 1, 1, 323m, 4 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Ratings",
+                columns: new[] { "RatingID", "ArticleID", "ClientID", "RatingDate", "RatingGrade" },
+                values: new object[,]
+                {
+                    { 1, 1, 1, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(507), 5 },
+                    { 2, 1, 2, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(1654), 4 },
+                    { 3, 2, 3, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(1687), 3 },
+                    { 4, 3, 4, new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(1691), 2 }
                 });
 
             migrationBuilder.CreateIndex(

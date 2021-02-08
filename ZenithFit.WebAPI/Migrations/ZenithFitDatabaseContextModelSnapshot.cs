@@ -62,6 +62,78 @@ namespace ZenithFit.WebAPI.Migrations
                     b.HasIndex("ManufacturerId");
 
                     b.ToTable("Articles");
+
+                    b.HasData(
+                        new
+                        {
+                            ArticleId = 1,
+                            ArticleCode = "2314",
+                            ArticleName = "Protein1",
+                            ArticlePrice = 300m,
+                            ArticleStatus = true,
+                            CategoryId = 1,
+                            ManufacturerId = 1
+                        },
+                        new
+                        {
+                            ArticleId = 2,
+                            ArticleCode = "2312541",
+                            ArticleName = "Protein2",
+                            ArticlePrice = 321m,
+                            ArticleStatus = true,
+                            CategoryId = 1,
+                            ManufacturerId = 1
+                        },
+                        new
+                        {
+                            ArticleId = 3,
+                            ArticleCode = "42312",
+                            ArticleName = "Weight3",
+                            ArticlePrice = 232m,
+                            ArticleStatus = true,
+                            CategoryId = 2,
+                            ManufacturerId = 2
+                        },
+                        new
+                        {
+                            ArticleId = 4,
+                            ArticleCode = "23121",
+                            ArticleName = "Weight2",
+                            ArticlePrice = 664m,
+                            ArticleStatus = true,
+                            CategoryId = 2,
+                            ManufacturerId = 2
+                        },
+                        new
+                        {
+                            ArticleId = 5,
+                            ArticleCode = "5675",
+                            ArticleName = "Random3",
+                            ArticlePrice = 213m,
+                            ArticleStatus = true,
+                            CategoryId = 3,
+                            ManufacturerId = 2
+                        },
+                        new
+                        {
+                            ArticleId = 6,
+                            ArticleCode = "756543",
+                            ArticleName = "Item7",
+                            ArticlePrice = 421m,
+                            ArticleStatus = true,
+                            CategoryId = 3,
+                            ManufacturerId = 3
+                        },
+                        new
+                        {
+                            ArticleId = 7,
+                            ArticleCode = "123115",
+                            ArticleName = "Something3",
+                            ArticlePrice = 122m,
+                            ArticleStatus = true,
+                            CategoryId = 3,
+                            ManufacturerId = 4
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Categories", b =>
@@ -80,6 +152,28 @@ namespace ZenithFit.WebAPI.Migrations
                         .HasName("PK__Categori__19093A2B0E46F8E4");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = 1,
+                            CategoryName = "Proteini"
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            CategoryName = "WeightGainer"
+                        },
+                        new
+                        {
+                            CategoryId = 3,
+                            CategoryName = "Pre-workout"
+                        },
+                        new
+                        {
+                            CategoryId = 4,
+                            CategoryName = "Fat-burner"
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Clients", b =>
@@ -125,6 +219,56 @@ namespace ZenithFit.WebAPI.Migrations
                         .HasName("PK__Clients__E67E1A044D08DA90");
 
                     b.ToTable("Clients");
+
+                    b.HasData(
+                        new
+                        {
+                            ClientId = 1,
+                            ClientEmail = "testing1@email.com",
+                            ClientFirstName = "Amer",
+                            ClientLastName = "Bilic",
+                            ClientPhone = "1233455",
+                            ClientRegisterDate = new DateTime(2021, 2, 3, 23, 21, 6, 895, DateTimeKind.Local).AddTicks(6055),
+                            ClientUsername = "mobile",
+                            PasswordHash = "qEkPhwY9P2FiDqx1Rgg26GoapxE=",
+                            PasswordSalt = "fVZy3b4Z1cvYNep/oXc7aA=="
+                        },
+                        new
+                        {
+                            ClientId = 2,
+                            ClientEmail = "testing2@email.com",
+                            ClientFirstName = "Denis",
+                            ClientLastName = "Bajrektarevic",
+                            ClientPhone = "312314",
+                            ClientRegisterDate = new DateTime(2021, 2, 3, 23, 21, 6, 898, DateTimeKind.Local).AddTicks(2302),
+                            ClientUsername = "hajfo",
+                            PasswordHash = "r577PsUb6lkHEs32NUsQHbqEhqc=",
+                            PasswordSalt = "jpiaSiCqXBnw1z4lUnuRww=="
+                        },
+                        new
+                        {
+                            ClientId = 3,
+                            ClientEmail = "testing3@email.com",
+                            ClientFirstName = "Ajdin",
+                            ClientLastName = "Muftic",
+                            ClientPhone = "4133211",
+                            ClientRegisterDate = new DateTime(2021, 2, 3, 23, 21, 6, 898, DateTimeKind.Local).AddTicks(2397),
+                            ClientUsername = "zake123",
+                            PasswordHash = "ZnhzTGY3bXxC4FoYf7FEzHB+w/c=",
+                            PasswordSalt = "hx1Yw2OJcF/dQGfUKNhQgg=="
+                        },
+                        new
+                        {
+                            ClientId = 4,
+                            ClientEmail = "testing4@email.com",
+                            ClientFirstName = "Beze",
+                            ClientLastName = "Kaljic",
+                            ClientPhone = "5141231",
+                            ClientRegisterDate = new DateTime(2021, 2, 3, 23, 21, 6, 898, DateTimeKind.Local).AddTicks(2405),
+                            ClientUsername = "tarke321",
+                            PasswordHash = "r577PsUb6lkHEs32NUsQHbqEhqc=",
+                            PasswordSalt = "jpiaSiCqXBnw1z4lUnuRww=="
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.CompleteOrder", b =>
@@ -162,6 +306,44 @@ namespace ZenithFit.WebAPI.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("CompleteOrder");
+
+                    b.HasData(
+                        new
+                        {
+                            CompleteOrderId = 1,
+                            ClientId = 1,
+                            CompleteOrderDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(3056),
+                            CompleteOrderSent = true,
+                            OrderId = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            CompleteOrderId = 2,
+                            ClientId = 2,
+                            CompleteOrderDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(3973),
+                            CompleteOrderSent = true,
+                            OrderId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            CompleteOrderId = 3,
+                            ClientId = 3,
+                            CompleteOrderDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(4002),
+                            CompleteOrderSent = true,
+                            OrderId = 3,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            CompleteOrderId = 4,
+                            ClientId = 4,
+                            CompleteOrderDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(4006),
+                            CompleteOrderSent = true,
+                            OrderId = 4,
+                            UserId = 1
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Manufacturers", b =>
@@ -180,6 +362,28 @@ namespace ZenithFit.WebAPI.Migrations
                         .HasName("PK__Manufact__357E5CA1584EC634");
 
                     b.ToTable("Manufacturers");
+
+                    b.HasData(
+                        new
+                        {
+                            ManufacturerId = 1,
+                            ManufacturerName = "Olymp"
+                        },
+                        new
+                        {
+                            ManufacturerId = 2,
+                            ManufacturerName = "MyProtein"
+                        },
+                        new
+                        {
+                            ManufacturerId = 3,
+                            ManufacturerName = "IronMaxx"
+                        },
+                        new
+                        {
+                            ManufacturerId = 4,
+                            ManufacturerName = "RedWeiller"
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Notices", b =>
@@ -242,6 +446,44 @@ namespace ZenithFit.WebAPI.Migrations
                     b.HasIndex("ArticleId");
 
                     b.ToTable("OrderDetails");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderDetailsId = 1,
+                            Amount = 7,
+                            ArticleId = 1,
+                            Discount = 5m,
+                            OrderId = 1,
+                            Price = 230m
+                        },
+                        new
+                        {
+                            OrderDetailsId = 2,
+                            Amount = 7,
+                            ArticleId = 1,
+                            Discount = 5m,
+                            OrderId = 2,
+                            Price = 777m
+                        },
+                        new
+                        {
+                            OrderDetailsId = 3,
+                            Amount = 6,
+                            ArticleId = 3,
+                            Discount = 5m,
+                            OrderId = 3,
+                            Price = 66m
+                        },
+                        new
+                        {
+                            OrderDetailsId = 4,
+                            Amount = 11,
+                            ArticleId = 2,
+                            Discount = 5m,
+                            OrderId = 4,
+                            Price = 23m
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Orders", b =>
@@ -293,6 +535,60 @@ namespace ZenithFit.WebAPI.Migrations
                     b.HasIndex("WarehouseId");
 
                     b.ToTable("Orders");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderId = 1,
+                            ClientId = 1,
+                            OrderCancelled = false,
+                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderNumber = "N00-212315412",
+                            OrderPriceNoTax = 466m,
+                            OrderPriceTax = 545m,
+                            OrderStatus = true,
+                            UserId = 1,
+                            WarehouseId = 1
+                        },
+                        new
+                        {
+                            OrderId = 2,
+                            ClientId = 1,
+                            OrderCancelled = false,
+                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderNumber = "N00-212315413",
+                            OrderPriceNoTax = 555m,
+                            OrderPriceTax = 777m,
+                            OrderStatus = true,
+                            UserId = 1,
+                            WarehouseId = 1
+                        },
+                        new
+                        {
+                            OrderId = 3,
+                            ClientId = 2,
+                            OrderCancelled = false,
+                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderNumber = "N00-212315444",
+                            OrderPriceNoTax = 666m,
+                            OrderPriceTax = 888m,
+                            OrderStatus = true,
+                            UserId = 1,
+                            WarehouseId = 2
+                        },
+                        new
+                        {
+                            OrderId = 4,
+                            ClientId = 3,
+                            OrderCancelled = false,
+                            OrderDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderNumber = "N00-212315463",
+                            OrderPriceNoTax = 777m,
+                            OrderPriceTax = 999m,
+                            OrderStatus = true,
+                            UserId = 1,
+                            WarehouseId = 3
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.ProcurementDetails", b =>
@@ -325,6 +621,40 @@ namespace ZenithFit.WebAPI.Migrations
                     b.HasIndex("ProcurementId");
 
                     b.ToTable("ProcurementDetails");
+
+                    b.HasData(
+                        new
+                        {
+                            ProcurementDetailId = 1,
+                            Amount = 2,
+                            ArticleId = 1,
+                            Price = 230m,
+                            ProcurementId = 1
+                        },
+                        new
+                        {
+                            ProcurementDetailId = 2,
+                            Amount = 2,
+                            ArticleId = 3,
+                            Price = 321m,
+                            ProcurementId = 2
+                        },
+                        new
+                        {
+                            ProcurementDetailId = 3,
+                            Amount = 3,
+                            ArticleId = 2,
+                            Price = 322m,
+                            ProcurementId = 3
+                        },
+                        new
+                        {
+                            ProcurementDetailId = 4,
+                            Amount = 1,
+                            ArticleId = 1,
+                            Price = 323m,
+                            ProcurementId = 4
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Procurements", b =>
@@ -374,6 +704,56 @@ namespace ZenithFit.WebAPI.Migrations
                     b.HasIndex("WarehouseId");
 
                     b.ToTable("Procurements");
+
+                    b.HasData(
+                        new
+                        {
+                            ProcurementId = 1,
+                            ProcurementAccountAmount = 230m,
+                            ProcurementDate = new DateTime(2021, 2, 8, 23, 21, 6, 899, DateTimeKind.Local).AddTicks(5496),
+                            ProcurementNote = "This is a procurement",
+                            ProcurementNumber = "2132152",
+                            ProcurementTax = 5m,
+                            SupplierId = 1,
+                            UserId = 1,
+                            WarehouseId = 1
+                        },
+                        new
+                        {
+                            ProcurementId = 2,
+                            ProcurementAccountAmount = 23m,
+                            ProcurementDate = new DateTime(2021, 2, 8, 23, 21, 6, 899, DateTimeKind.Local).AddTicks(7603),
+                            ProcurementNote = "This is a procurement1",
+                            ProcurementNumber = "2132132",
+                            ProcurementTax = 5m,
+                            SupplierId = 1,
+                            UserId = 1,
+                            WarehouseId = 1
+                        },
+                        new
+                        {
+                            ProcurementId = 3,
+                            ProcurementAccountAmount = 24m,
+                            ProcurementDate = new DateTime(2021, 2, 8, 23, 21, 6, 899, DateTimeKind.Local).AddTicks(7688),
+                            ProcurementNote = "This is a procurement2",
+                            ProcurementNumber = "2132162",
+                            ProcurementTax = 5m,
+                            SupplierId = 2,
+                            UserId = 2,
+                            WarehouseId = 2
+                        },
+                        new
+                        {
+                            ProcurementId = 4,
+                            ProcurementAccountAmount = 25m,
+                            ProcurementDate = new DateTime(2021, 2, 8, 23, 21, 6, 899, DateTimeKind.Local).AddTicks(7693),
+                            ProcurementNote = "This is a procurement3",
+                            ProcurementNumber = "2132182",
+                            ProcurementTax = 5m,
+                            SupplierId = 3,
+                            UserId = 3,
+                            WarehouseId = 3
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Ratings", b =>
@@ -406,6 +786,40 @@ namespace ZenithFit.WebAPI.Migrations
                     b.HasIndex("ClientId");
 
                     b.ToTable("Ratings");
+
+                    b.HasData(
+                        new
+                        {
+                            RatingId = 1,
+                            ArticleId = 1,
+                            ClientId = 1,
+                            RatingDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(507),
+                            RatingGrade = 5
+                        },
+                        new
+                        {
+                            RatingId = 2,
+                            ArticleId = 1,
+                            ClientId = 2,
+                            RatingDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(1654),
+                            RatingGrade = 4
+                        },
+                        new
+                        {
+                            RatingId = 3,
+                            ArticleId = 2,
+                            ClientId = 3,
+                            RatingDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(1687),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 4,
+                            ArticleId = 3,
+                            ClientId = 4,
+                            RatingDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(1691),
+                            RatingGrade = 2
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.RequestDetails", b =>
@@ -486,6 +900,20 @@ namespace ZenithFit.WebAPI.Migrations
                         .HasName("PK__Roles__8AFACE3A32FDA6D3");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            RoleId = 1,
+                            RoleName = "Admin",
+                            RoleNote = "Administrator"
+                        },
+                        new
+                        {
+                            RoleId = 2,
+                            RoleName = "Employee",
+                            RoleNote = "Employee"
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Suppliers", b =>
@@ -534,6 +962,60 @@ namespace ZenithFit.WebAPI.Migrations
                         .HasName("PK__Supplier__4BE66694FF6CCDB0");
 
                     b.ToTable("Suppliers");
+
+                    b.HasData(
+                        new
+                        {
+                            SupplierId = 1,
+                            SupplierAddress = "Random address",
+                            SupplierBankAccount = "12315125",
+                            SupplierContact = "supcontact",
+                            SupplierEmail = "supplier1@email.com",
+                            SupplierName = "Supplier",
+                            SupplierNote = "He is a supplier",
+                            SupplierPhone = "12312541",
+                            SupplierStatus = true,
+                            SupplierWeb = "www.supplier.com"
+                        },
+                        new
+                        {
+                            SupplierId = 2,
+                            SupplierAddress = "Random address2",
+                            SupplierBankAccount = "123151254",
+                            SupplierContact = "supcontact2",
+                            SupplierEmail = "supplier2@email.com",
+                            SupplierName = "Supplier2",
+                            SupplierNote = "He is a supplier",
+                            SupplierPhone = "123125412",
+                            SupplierStatus = true,
+                            SupplierWeb = "www.supplier2.com"
+                        },
+                        new
+                        {
+                            SupplierId = 3,
+                            SupplierAddress = "Random address3",
+                            SupplierBankAccount = "123151251",
+                            SupplierContact = "supcontact3",
+                            SupplierEmail = "supplier3@email.com",
+                            SupplierName = "Supplier3",
+                            SupplierNote = "He is a supplier",
+                            SupplierPhone = "123125413",
+                            SupplierStatus = true,
+                            SupplierWeb = "www.supplier22.com"
+                        },
+                        new
+                        {
+                            SupplierId = 4,
+                            SupplierAddress = "Random address4",
+                            SupplierBankAccount = "123151252",
+                            SupplierContact = "supcontact4",
+                            SupplierEmail = "supplier4@email.com",
+                            SupplierName = "Supplier4",
+                            SupplierNote = "He is a supplier",
+                            SupplierPhone = "123125414",
+                            SupplierStatus = true,
+                            SupplierWeb = "www.supplier222.com"
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.UserRoles", b =>
@@ -563,6 +1045,29 @@ namespace ZenithFit.WebAPI.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserRoleId = 1,
+                            ChangeDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(7816),
+                            RoleId = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            UserRoleId = 2,
+                            ChangeDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(8194),
+                            RoleId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            UserRoleId = 3,
+                            ChangeDate = new DateTime(2021, 2, 8, 23, 21, 6, 900, DateTimeKind.Local).AddTicks(8207),
+                            RoleId = 2,
+                            UserId = 3
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Users", b =>
@@ -605,6 +1110,41 @@ namespace ZenithFit.WebAPI.Migrations
                         .HasName("PK__Users__1788CCAC54B38ACA");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = 1,
+                            PasswordHash = "qEkPhwY9P2FiDqx1Rgg26GoapxE=",
+                            PasswordSalt = "fVZy3b4Z1cvYNep/oXc7aA==",
+                            UserEmail = "testing33@email.com",
+                            UserFirstName = "Amer",
+                            UserLastName = "Hajfic",
+                            UserPhone = "3213215",
+                            UserUsername = "admin"
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            PasswordHash = "qEkPhwY9P2FiDqx12gg26GoapxE=",
+                            PasswordSalt = "fVZy3b4Z1cvYNep/oXc7dA==",
+                            UserEmail = "testing333@email.com",
+                            UserFirstName = "Denis",
+                            UserLastName = "Beso",
+                            UserPhone = "32132154",
+                            UserUsername = "denje"
+                        },
+                        new
+                        {
+                            UserId = 3,
+                            PasswordHash = "qEkPhwY9P2FiDqx17gg26GoapxE=",
+                            PasswordSalt = "fVZy3b4Z1cvYNep/oXc7wA==",
+                            UserEmail = "testing343@email.com",
+                            UserFirstName = "Imad",
+                            UserLastName = "Spahic",
+                            UserPhone = "32132157",
+                            UserUsername = "samar"
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Warehouses", b =>
@@ -630,6 +1170,36 @@ namespace ZenithFit.WebAPI.Migrations
                         .HasName("PK__Warehous__2608AFD92D3BBDD6");
 
                     b.ToTable("Warehouses");
+
+                    b.HasData(
+                        new
+                        {
+                            WarehouseId = 1,
+                            WarehouseAddress = "Address1",
+                            WarehouseName = "Warehouse1",
+                            WarehouseNote = "This is a note"
+                        },
+                        new
+                        {
+                            WarehouseId = 2,
+                            WarehouseAddress = "Address1",
+                            WarehouseName = "Warehouse2",
+                            WarehouseNote = "This is a note"
+                        },
+                        new
+                        {
+                            WarehouseId = 3,
+                            WarehouseAddress = "Address3",
+                            WarehouseName = "Pre-Warehouse3",
+                            WarehouseNote = "This is a note"
+                        },
+                        new
+                        {
+                            WarehouseId = 4,
+                            WarehouseAddress = "Address4",
+                            WarehouseName = "Fat-Warehouse4",
+                            WarehouseNote = "This is a note"
+                        });
                 });
 
             modelBuilder.Entity("ZenithFit.WebAPI.Database.Articles", b =>
