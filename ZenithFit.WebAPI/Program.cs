@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,7 +16,12 @@ namespace ZenithFit.WebAPI
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
-           // host.
+            using (var scope = host.Services.CreateScope())
+            {
+                var service = scope.ServiceProvider.GetRequiredService<ZenithFit.WebAPI.Database.ZenithFitDatabaseContext>();
+                Database.Data.Seed(service);
+            }
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
