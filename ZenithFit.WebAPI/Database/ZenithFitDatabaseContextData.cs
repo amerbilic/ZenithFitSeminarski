@@ -17,6 +17,12 @@ namespace ZenithFit.WebAPI.Database
             new Warehouses() { WarehouseName = "Pre-Warehouse3", WarehouseId = 3, WarehouseAddress = "Address3", WarehouseNote = "This is a note" },
             new Warehouses() { WarehouseName = "Fat-Warehouse4", WarehouseId = 4, WarehouseAddress = "Address4", WarehouseNote = "This is a note" });
 
+            modelBuilder.Entity<GoalsChoices>().HasData(
+            new GoalsChoices() { GoalsChoicesId = 1, GoalName = "Muscle Building" },
+            new GoalsChoices() { GoalsChoicesId = 2, GoalName = "Fat Burning" },
+            new GoalsChoices() { GoalsChoicesId = 3, GoalName = "Bulking" });
+            
+
             modelBuilder.Entity<Categories>().HasData(
             new Categories() { CategoryName = "Proteini", CategoryId = 1 },
             new Categories() { CategoryName = "WeightGainer", CategoryId = 2 },

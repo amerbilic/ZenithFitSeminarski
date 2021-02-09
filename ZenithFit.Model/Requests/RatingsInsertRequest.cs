@@ -14,6 +14,6 @@ namespace ZenithFit.Model.Requests
         [Required]
         public DateTime RatingDate { get; set; }
         [Required]
-        public int Rating { get; set; }
+        public int RatingGrade { get; set; }
     }
 }

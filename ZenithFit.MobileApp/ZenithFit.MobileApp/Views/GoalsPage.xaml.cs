@@ -6,15 +6,33 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ZenithFit.MobileApp.ViewModels;
+using ZenithFit.Model;
 
 namespace ZenithFit.MobileApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GoalsPage : ContentPage
     {
+        public GoalsViewModel model = null;
+
         public GoalsPage()
         {
             InitializeComponent();
+            BindingContext = model = new GoalsViewModel();
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await model.Init();
+        }
+
+        private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as Articles;
+            await Navigation.PushAsync(new ArticleDetailsPage(item));
+
         }
     }
 }

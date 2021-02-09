@@ -15,4 +15,3 @@ C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.Model\obj\Debug\net
 C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.Model\obj\Debug\netstandard2.0\ZenithFit.Model.csproj.CoreCompileInputs.cache
 C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.Model\obj\Debug\netstandard2.0\ZenithFit.Model.dll
 C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.Model\obj\Debug\netstandard2.0\ZenithFit.Model.pdb
-C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.Model\obj\Debug\netstandard2.0\ZenithFit.Model.csprojAssemblyReference.cache

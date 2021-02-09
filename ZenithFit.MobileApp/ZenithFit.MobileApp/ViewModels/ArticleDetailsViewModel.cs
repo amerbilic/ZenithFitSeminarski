@@ -123,7 +123,7 @@ namespace ZenithFit.MobileApp.ViewModels
             {
                 ArticleID = Article.ArticleID,
                 ClientID = LoggedInUser.ActiveClient.ClientId,
-                Rating = rating,
+                RatingGrade = rating,
                 RatingDate = DateTime.Now
             };
 

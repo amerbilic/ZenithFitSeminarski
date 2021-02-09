@@ -94,6 +94,7 @@ namespace ZenithFit.WebAPI
             //Warehouses
             services.AddScoped<ICRUDService<Model.Warehouses, WarehousesSearchRequest, WarehousesInsertRequest, object>, WarehousesService>();
             services.AddScoped<IRecommender, RecommenderService>();
+            services.AddScoped<ICRUDService<Model.GoalsChoices,object,object,object>, GoalsService>();
             //Context
             services.AddScoped<IService<Model.Roles, object>, BaseService<Model.Roles,object,Database.Roles>>();
             services.AddDbContext<ZenithFitDatabaseContext>(options => options.UseSqlServer(connection));
