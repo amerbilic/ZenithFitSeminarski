@@ -93,6 +93,7 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="Manufacturers\frmManufacturersNew.cs">
       <SubType>Form</SubType>
     </Compile>

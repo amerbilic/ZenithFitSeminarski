@@ -63,5 +63,12 @@ namespace ZenithFit.WinUI
 
             return await url.WithBasicAuth(Username, Password).PutJsonAsync(update).ReceiveJson<T>();
         }
+
+        public async Task<T> Authenticate<T>(object request)
+        {
+            var url = $"{Properties.Settings.Default.APIUrl}/{_route}";
+
+            return await url.WithBasicAuth(Username, Password).PostJsonAsync(request).ReceiveJson<T>();
+        }
     }
 }

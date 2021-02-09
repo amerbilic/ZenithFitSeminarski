@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZenithFit.Model.Requests;
 
 namespace ZenithFit.WinUI
 {
     public partial class frmLogin : Form
     {
-        APIService _service = new APIService("Articles");
+
+
+        private readonly APIService _service = new APIService("Users");
+        private readonly APIService _serviceroles = new APIService("UserRoles");
         public frmLogin()
         {
             InitializeComponent();
@@ -20,21 +24,41 @@ namespace ZenithFit.WinUI
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+
             try
             {
                 APIService.Username = txtUsername.Text;
                 APIService.Password = txtPassword.Text;
 
-                await _service.Get<dynamic>(null);
+                UserLoginRequest newLogin = new UserLoginRequest { Password = txtPassword.Text, Username = txtUsername.Text };
 
-                frmIndex frm = new frmIndex();
-                frm.Show();
+                var temp = await _service.Authenticate<Model.Users>(newLogin);
 
+                    //this.Hide();
+                    frmIndex frm = new frmIndex();
+                    frm.Show();
             }
-            catch(Exception ex)
+            catch (Exception exception)
             {
-                MessageBox.Show(ex.Message, "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exception.Message, "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            /* APIService.Username = txtUsername.Text;
+             APIService.Password = txtPassword.Text;
+
+             await _service.Get<dynamic>(null);
+
+             frmIndex frm = new frmIndex();
+             frm.Show();
+
+         }
+         catch(Exception ex)
+         {
+             MessageBox.Show(ex.Message, "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error);
+         }*/
+
+
         }
     }
 }
+

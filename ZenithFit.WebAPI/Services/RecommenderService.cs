@@ -23,12 +23,12 @@ namespace ZenithFit.WebAPI.Services
 
 
 
-        public List<Model.Articles> GetSimilarArticles(int ArticleID)
+        public List<Model.Articles> GetSimilarArticles(int ArticleId)
         {
-            LoadArticles(ArticleID);
+            LoadArticles(ArticleId);
 
             List<Model.Ratings> ObservedArticleRatings = new List<Model.Ratings>();
-            List<Database.Ratings> recordedratings = _context.Ratings.Where(x => x.ArticleId == ArticleID).OrderBy(x => x.ClientId).ToList();
+            List<Database.Ratings> recordedratings = _context.Ratings.Where(x => x.ArticleId == ArticleId).OrderBy(x => x.ClientId).ToList();
             _mapper.Map(recordedratings, ObservedArticleRatings);
 
             List<Model.Ratings> CompoundRatings1 = new List<Model.Ratings>();

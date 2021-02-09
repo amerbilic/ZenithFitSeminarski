@@ -25,7 +25,7 @@ namespace ZenithFit.WinUI.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44386/api")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:53194/api")]
         public string APIUrl {
             get {
                 return ((string)(this["APIUrl"]));

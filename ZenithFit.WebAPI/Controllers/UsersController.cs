@@ -12,7 +12,7 @@ using ZenithFit.WebAPI.Services;
 
 namespace ZenithFit.WebAPI.Controllers
 {
-    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
+    
     [Route("api/[controller]")]
     [ApiController]
 
@@ -48,6 +48,13 @@ namespace ZenithFit.WebAPI.Controllers
         {
             return _service.Update(id,update);
 
+        }
+
+        [HttpGet]
+        [Route("Authenticate")]
+        public Model.Users Authenticate(UserLoginRequest request)
+        {
+            return _service.Authenticate(request);
         }
 
     }

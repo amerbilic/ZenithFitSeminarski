@@ -17,6 +17,6 @@ namespace ZenithFit.WebAPI.Services
 
         Model.Users Update(int id, UsersInsertRequest update);
 
-        Model.Users Authenticate(string username, string password);
+        Model.Users Authenticate(UserLoginRequest request);
     }
 }

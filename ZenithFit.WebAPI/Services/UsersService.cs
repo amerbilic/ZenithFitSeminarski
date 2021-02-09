@@ -115,24 +115,24 @@ namespace ZenithFit.WebAPI.Services
             return _mapper.Map<Model.Users>(entity);
         }
 
-        public Model.Users Authenticate(string username, string password)
+        public Model.Users Authenticate(UserLoginRequest request)
         {
-            var user = _context.Users.Include(x=>x.UserRoles).ThenInclude(x=>x.Role).FirstOrDefault(x => x.UserUsername == username);
+            var entity = _context.Users.Include(x => x.UserRoles).ThenInclude(x => x.Role).FirstOrDefault(x => x.UserUsername == request.Username);
 
-            if (user != null)
+            if (entity == null)
             {
-                var newHash = GenerateHash(user.PasswordSalt, password);
-
-                if (newHash == user.PasswordHash)
-                {
-
-                    return _mapper.Map<Model.Users>(user);
-
-                    
-                }
+                throw new UserException("Wrong username!");
             }
-            return null;
+
+            var hash = GenerateHash(entity.PasswordSalt, request.Password);
+
+            if (hash != entity.PasswordHash)
+            {
+                throw new UserException("Wrong password!");
+            }
+
+            return _mapper.Map<Model.Users>(entity);
+
         }
-    }
-}
-    
+        }
+    }    

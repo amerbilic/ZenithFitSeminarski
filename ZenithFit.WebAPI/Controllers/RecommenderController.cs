@@ -21,9 +21,9 @@ namespace ZenithFit.WebAPI.Controllers
 
             [HttpGet]
             [Route("GetSimilarArticles/{ArticleId}")]
-            public List<Model.Articles> GetSimilarArticles(int articleID)
+            public List<Model.Articles> GetSimilarArticles(int ArticleId)
             {
-                return _service.GetSimilarArticles(articleID);
+                return _service.GetSimilarArticles(ArticleId);
             }
         }
 }

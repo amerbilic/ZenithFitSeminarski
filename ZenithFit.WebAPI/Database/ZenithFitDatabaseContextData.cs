@@ -85,8 +85,18 @@ namespace ZenithFit.WebAPI.Database
             modelBuilder.Entity<Ratings>().HasData(
             new Ratings() { RatingId = 1, RatingDate = DateTime.Now, ClientId = 1, RatingGrade = 5, ArticleId = 1 },
             new Ratings() { RatingId = 2, RatingDate = DateTime.Now, ClientId = 2, RatingGrade = 4, ArticleId = 1 },
-            new Ratings() { RatingId = 3, RatingDate = DateTime.Now, ClientId = 3, RatingGrade = 3, ArticleId = 2 },
-            new Ratings() { RatingId = 4, RatingDate = DateTime.Now, ClientId = 4, RatingGrade = 2, ArticleId = 3 });
+            new Ratings() { RatingId = 3, RatingDate = DateTime.Now, ClientId = 3, RatingGrade = 3, ArticleId = 1 },
+            new Ratings() { RatingId = 4, RatingDate = DateTime.Now, ClientId = 4, RatingGrade = 3, ArticleId = 1 },
+            new Ratings() { RatingId = 5, RatingDate = DateTime.Now, ClientId = 1, RatingGrade = 3, ArticleId = 2 },
+            new Ratings() { RatingId = 6, RatingDate = DateTime.Now, ClientId = 2, RatingGrade = 3, ArticleId = 2 },
+            new Ratings() { RatingId = 7, RatingDate = DateTime.Now, ClientId = 3, RatingGrade = 3, ArticleId = 2 },
+            new Ratings() { RatingId = 8, RatingDate = DateTime.Now, ClientId = 4, RatingGrade = 3, ArticleId = 2 },
+            new Ratings() { RatingId = 9, RatingDate = DateTime.Now, ClientId = 1, RatingGrade = 3, ArticleId = 3 },
+            new Ratings() { RatingId = 10, RatingDate = DateTime.Now, ClientId = 2, RatingGrade = 3, ArticleId = 3 },
+            new Ratings() { RatingId = 11, RatingDate = DateTime.Now, ClientId = 3, RatingGrade = 3, ArticleId = 3 },
+            new Ratings() { RatingId = 12, RatingDate = DateTime.Now, ClientId = 4, RatingGrade = 3, ArticleId = 3 },
+            new Ratings() { RatingId = 13, RatingDate = DateTime.Now, ClientId = 1, RatingGrade = 3, ArticleId = 4 },
+            new Ratings() { RatingId = 14, RatingDate = DateTime.Now, ClientId = 2, RatingGrade = 4, ArticleId = 4 });
 
             modelBuilder.Entity<CompleteOrder>().HasData(
             new CompleteOrder() { CompleteOrderId = 1, ClientId = 1, UserId = 1, CompleteOrderDate = DateTime.Now, CompleteOrderSent = true, OrderId = 1 },
