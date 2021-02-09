@@ -16,7 +16,8 @@ namespace ZenithFit.WinUI
 
 
         private readonly APIService _service = new APIService("Users");
-        private readonly APIService _serviceroles = new APIService("UserRoles");
+        private readonly APIService _serviceroles = new APIService("Role");
+        Model.Roles admin = null;
         public frmLogin()
         {
             InitializeComponent();
@@ -24,39 +25,34 @@ namespace ZenithFit.WinUI
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
+            Model.Users user = await _service.Authenticate<Model.Users>(txtUsername.Text, txtPassword.Text);
+            int roleid1 = 0;
 
-            try
+            if (user != null)
             {
-                APIService.Username = txtUsername.Text;
-                APIService.Password = txtPassword.Text;
+                Global.LoggedInUser = user;
 
-                UserLoginRequest newLogin = new UserLoginRequest { Password = txtPassword.Text, Username = txtUsername.Text };
+                foreach (var item in Global.LoggedInUser.UserRoles)
+                {
+                    roleid1 = item.RoleID;
+                }
+                admin = await _serviceroles.CheckAdmin<Model.Roles>(roleid1);
 
-                var temp = await _service.Authenticate<Model.Users>(newLogin);
+                if (admin != null)
+                {
+                    Global.Admin = true;
+                }
 
-                    //this.Hide();
-                    frmIndex frm = new frmIndex();
-                    frm.Show();
+                MessageBox.Show("Welcome " + user.UserFirstName + " " + user.UserLastName);
+                DialogResult = DialogResult.OK;
+                frmIndex frm = new frmIndex();
+                frm.Show();
             }
-            catch (Exception exception)
+
+            else
             {
-                MessageBox.Show(exception.Message, "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Wrong username or password", "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            /* APIService.Username = txtUsername.Text;
-             APIService.Password = txtPassword.Text;
-
-             await _service.Get<dynamic>(null);
-
-             frmIndex frm = new frmIndex();
-             frm.Show();
-
-         }
-         catch(Exception ex)
-         {
-             MessageBox.Show(ex.Message, "Authentication", MessageBoxButtons.OK, MessageBoxIcon.Error);
-         }*/
-
 
         }
     }

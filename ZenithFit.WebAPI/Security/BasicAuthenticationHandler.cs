@@ -41,7 +41,7 @@ namespace ZenithFit.WebAPI.Security
                 var credentials = Encoding.UTF8.GetString(credentialBytes).Split(':');
                 var username = credentials[0];
                 var password = credentials[1];
-                user = _userService.Authenticate(new Model.Requests.UserLoginRequest() { Username = username, Password=password});
+                user = _userService.Authenticate(username,password);
             }
             catch
             {

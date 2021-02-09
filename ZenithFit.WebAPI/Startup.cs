@@ -69,6 +69,7 @@ namespace ZenithFit.WebAPI
 
             services.AddAuthentication("BasicAuthentication").AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
             services.AddScoped<IUsersService, UsersService>();
+            services.AddScoped<IRolesService, RolesService>();
             //Articles
             services.AddScoped<ICRUDService<Model.Articles, ArticlesSearchRequest, ArticlesUpsertRequest, ArticlesUpsertRequest>, ArticlesService>();
             //Manufacturers

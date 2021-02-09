@@ -115,24 +115,66 @@ namespace ZenithFit.WebAPI.Services
             return _mapper.Map<Model.Users>(entity);
         }
 
-        public Model.Users Authenticate(UserLoginRequest request)
+        public Model.Users Authenticate(string username, string password)
         {
-            var entity = _context.Users.Include(x => x.UserRoles).ThenInclude(x => x.Role).FirstOrDefault(x => x.UserUsername == request.Username);
+            var user = _context.Users.Include(x => x.UserRoles).ThenInclude(x => x.Role).FirstOrDefault(x => x.UserUsername == username);
 
-            if (entity == null)
+            if (user != null)
             {
-                throw new UserException("Wrong username!");
+                var hashedPass = GenerateHash(user.PasswordSalt, password);
+
+                if (hashedPass == user.PasswordHash)
+                {
+                    var roles = _context.UserRoles.Where(x => x.UserId == user.UserId);
+                    Model.Users newuser = new Model.Users();
+
+                    foreach (var item in roles)
+                    {
+
+                        newuser.UserRoles = new List<Model.UserRoles>();
+                        newuser.UserRoles.Add(new Model.UserRoles
+                        {
+                            ChangedDate = item.ChangeDate,
+                            UserID = item.UserId,
+                            RoleID = item.RoleId,
+                            UserRoleID = item.UserRoleId
+                        });
+                    }
+                    newuser.UserFirstName = user.UserFirstName;
+                    newuser.UserLastName = user.UserLastName;
+                    newuser.UserUsername = user.UserUsername;
+                    newuser.UserEmail = user.UserEmail;
+                    newuser.UserId = user.UserId;
+                    newuser.UserPhone = user.UserPhone;
+
+                    return newuser;
+
+                }
             }
 
-            var hash = GenerateHash(entity.PasswordSalt, request.Password);
-
-            if (hash != entity.PasswordHash)
-            {
-                throw new UserException("Wrong password!");
-            }
-
-            return _mapper.Map<Model.Users>(entity);
-
+            return null;
         }
-        }
+
+        /* public Model.Users Authenticate(string username,string password)
+         {
+             var entity = _context.Users.Include(x => x.UserRoles).ThenInclude(x => x.Role).FirstOrDefault(x => x.UserUsername == username);
+
+             if (entity == null)
+             {
+                 throw new UserException("Wrong username!");
+             }
+
+             var hash = GenerateHash(entity.PasswordSalt, password);
+
+             if (hash != entity.PasswordHash)
+             {
+                 throw new UserException("Wrong password!");
+             }
+
+             return _mapper.Map<Model.Users>(entity);
+
+         }*/
+
+
+    }
     }    

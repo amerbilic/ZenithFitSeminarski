@@ -64,11 +64,18 @@ namespace ZenithFit.WinUI
             return await url.WithBasicAuth(Username, Password).PutJsonAsync(update).ReceiveJson<T>();
         }
 
-        public async Task<T> Authenticate<T>(object request)
+        public async Task<T> Authenticate<T>(string username,string password)
         {
-            var url = $"{Properties.Settings.Default.APIUrl}/{_route}";
+            var url = $"{Properties.Settings.Default.APIUrl}/{_route}/Authenticiraj/{username},{password}";
 
-            return await url.WithBasicAuth(Username, Password).PostJsonAsync(request).ReceiveJson<T>();
+            return await url.GetJsonAsync<T>();
+        }
+
+        public async Task<T> CheckAdmin<T>(int RoleId)
+        {
+            var url = $"{Properties.Settings.Default.APIUrl}/{_route}/CheckAdmin/{RoleId}";
+
+            return await url.GetJsonAsync<T>();
         }
     }
 }

@@ -51,10 +51,10 @@ namespace ZenithFit.WebAPI.Controllers
         }
 
         [HttpGet]
-        [Route("Authenticate")]
-        public Model.Users Authenticate(UserLoginRequest request)
+        [Route("Authenticiraj/{username},{password}")]
+        public Model.Users Authenticate(string username, string password)
         {
-            return _service.Authenticate(request);
+            return _service.Authenticate(username, password);
         }
 
     }
