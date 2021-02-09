@@ -10,8 +10,8 @@ using ZenithFit.WebAPI.Database;
 namespace ZenithFit.WebAPI.Migrations
 {
     [DbContext(typeof(ZenithFitDatabaseContext))]
-    [Migration("20210209002927_initial")]
-    partial class initial
+    [Migration("20210209165101_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -244,7 +244,7 @@ namespace ZenithFit.WebAPI.Migrations
                             ClientFirstName = "Amer",
                             ClientLastName = "Bilic",
                             ClientPhone = "1233455",
-                            ClientRegisterDate = new DateTime(2021, 2, 4, 1, 29, 27, 519, DateTimeKind.Local).AddTicks(5160),
+                            ClientRegisterDate = new DateTime(2021, 2, 4, 17, 51, 0, 587, DateTimeKind.Local).AddTicks(2588),
                             ClientUsername = "mobile",
                             PasswordHash = "qEkPhwY9P2FiDqx1Rgg26GoapxE=",
                             PasswordSalt = "fVZy3b4Z1cvYNep/oXc7aA=="
@@ -256,7 +256,7 @@ namespace ZenithFit.WebAPI.Migrations
                             ClientFirstName = "Denis",
                             ClientLastName = "Bajrektarevic",
                             ClientPhone = "312314",
-                            ClientRegisterDate = new DateTime(2021, 2, 4, 1, 29, 27, 522, DateTimeKind.Local).AddTicks(1035),
+                            ClientRegisterDate = new DateTime(2021, 2, 4, 17, 51, 0, 589, DateTimeKind.Local).AddTicks(8996),
                             ClientUsername = "hajfo",
                             PasswordHash = "r577PsUb6lkHEs32NUsQHbqEhqc=",
                             PasswordSalt = "jpiaSiCqXBnw1z4lUnuRww=="
@@ -268,7 +268,7 @@ namespace ZenithFit.WebAPI.Migrations
                             ClientFirstName = "Ajdin",
                             ClientLastName = "Muftic",
                             ClientPhone = "4133211",
-                            ClientRegisterDate = new DateTime(2021, 2, 4, 1, 29, 27, 522, DateTimeKind.Local).AddTicks(1097),
+                            ClientRegisterDate = new DateTime(2021, 2, 4, 17, 51, 0, 589, DateTimeKind.Local).AddTicks(9058),
                             ClientUsername = "zake123",
                             PasswordHash = "ZnhzTGY3bXxC4FoYf7FEzHB+w/c=",
                             PasswordSalt = "hx1Yw2OJcF/dQGfUKNhQgg=="
@@ -280,7 +280,7 @@ namespace ZenithFit.WebAPI.Migrations
                             ClientFirstName = "Beze",
                             ClientLastName = "Kaljic",
                             ClientPhone = "5141231",
-                            ClientRegisterDate = new DateTime(2021, 2, 4, 1, 29, 27, 522, DateTimeKind.Local).AddTicks(1104),
+                            ClientRegisterDate = new DateTime(2021, 2, 4, 17, 51, 0, 589, DateTimeKind.Local).AddTicks(9065),
                             ClientUsername = "tarke321",
                             PasswordHash = "r577PsUb6lkHEs32NUsQHbqEhqc=",
                             PasswordSalt = "jpiaSiCqXBnw1z4lUnuRww=="
@@ -328,7 +328,7 @@ namespace ZenithFit.WebAPI.Migrations
                         {
                             CompleteOrderId = 1,
                             ClientId = 1,
-                            CompleteOrderDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(2251),
+                            CompleteOrderDate = new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(171),
                             CompleteOrderSent = true,
                             OrderId = 1,
                             UserId = 1
@@ -337,7 +337,7 @@ namespace ZenithFit.WebAPI.Migrations
                         {
                             CompleteOrderId = 2,
                             ClientId = 2,
-                            CompleteOrderDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(3188),
+                            CompleteOrderDate = new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(1185),
                             CompleteOrderSent = true,
                             OrderId = 2,
                             UserId = 2
@@ -346,7 +346,7 @@ namespace ZenithFit.WebAPI.Migrations
                         {
                             CompleteOrderId = 3,
                             ClientId = 3,
-                            CompleteOrderDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(3279),
+                            CompleteOrderDate = new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(1212),
                             CompleteOrderSent = true,
                             OrderId = 3,
                             UserId = 3
@@ -355,7 +355,7 @@ namespace ZenithFit.WebAPI.Migrations
                         {
                             CompleteOrderId = 4,
                             ClientId = 4,
-                            CompleteOrderDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(3283),
+                            CompleteOrderDate = new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(1216),
                             CompleteOrderSent = true,
                             OrderId = 4,
                             UserId = 1
@@ -758,7 +758,7 @@ namespace ZenithFit.WebAPI.Migrations
                         {
                             ProcurementId = 1,
                             ProcurementAccountAmount = 230m,
-                            ProcurementDate = new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(3923),
+                            ProcurementDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(1592),
                             ProcurementNote = "This is a procurement",
                             ProcurementNumber = "2132152",
                             ProcurementTax = 5m,
@@ -770,7 +770,7 @@ namespace ZenithFit.WebAPI.Migrations
                         {
                             ProcurementId = 2,
                             ProcurementAccountAmount = 23m,
-                            ProcurementDate = new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(6068),
+                            ProcurementDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(3954),
                             ProcurementNote = "This is a procurement1",
                             ProcurementNumber = "2132132",
                             ProcurementTax = 5m,
@@ -782,7 +782,7 @@ namespace ZenithFit.WebAPI.Migrations
                         {
                             ProcurementId = 3,
                             ProcurementAccountAmount = 24m,
-                            ProcurementDate = new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(6117),
+                            ProcurementDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(4009),
                             ProcurementNote = "This is a procurement2",
                             ProcurementNumber = "2132162",
                             ProcurementTax = 5m,
@@ -794,7 +794,7 @@ namespace ZenithFit.WebAPI.Migrations
                         {
                             ProcurementId = 4,
                             ProcurementAccountAmount = 25m,
-                            ProcurementDate = new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(6122),
+                            ProcurementDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(4015),
                             ProcurementNote = "This is a procurement3",
                             ProcurementNumber = "2132182",
                             ProcurementTax = 5m,
@@ -841,7 +841,7 @@ namespace ZenithFit.WebAPI.Migrations
                             RatingId = 1,
                             ArticleId = 1,
                             ClientId = 1,
-                            RatingDate = new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(9226),
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(7394),
                             RatingGrade = 5
                         },
                         new
@@ -849,24 +849,104 @@ namespace ZenithFit.WebAPI.Migrations
                             RatingId = 2,
                             ArticleId = 1,
                             ClientId = 2,
-                            RatingDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(750),
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8650),
                             RatingGrade = 4
                         },
                         new
                         {
                             RatingId = 3,
-                            ArticleId = 2,
+                            ArticleId = 1,
                             ClientId = 3,
-                            RatingDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(804),
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8711),
                             RatingGrade = 3
                         },
                         new
                         {
                             RatingId = 4,
+                            ArticleId = 1,
+                            ClientId = 4,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8715),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 5,
+                            ArticleId = 2,
+                            ClientId = 1,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8719),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 6,
+                            ArticleId = 2,
+                            ClientId = 2,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8722),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 7,
+                            ArticleId = 2,
+                            ClientId = 3,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8725),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 8,
+                            ArticleId = 2,
+                            ClientId = 4,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8729),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 9,
+                            ArticleId = 3,
+                            ClientId = 1,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8732),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 10,
+                            ArticleId = 3,
+                            ClientId = 2,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8735),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 11,
+                            ArticleId = 3,
+                            ClientId = 3,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8739),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 12,
                             ArticleId = 3,
                             ClientId = 4,
-                            RatingDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(808),
-                            RatingGrade = 2
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8777),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 13,
+                            ArticleId = 4,
+                            ClientId = 1,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8781),
+                            RatingGrade = 3
+                        },
+                        new
+                        {
+                            RatingId = 14,
+                            ArticleId = 4,
+                            ClientId = 2,
+                            RatingDate = new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8785),
+                            RatingGrade = 4
                         });
                 });
 
@@ -1098,21 +1178,21 @@ namespace ZenithFit.WebAPI.Migrations
                         new
                         {
                             UserRoleId = 1,
-                            ChangeDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(7141),
+                            ChangeDate = new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(4942),
                             RoleId = 1,
                             UserId = 1
                         },
                         new
                         {
                             UserRoleId = 2,
-                            ChangeDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(7515),
+                            ChangeDate = new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(5403),
                             RoleId = 2,
                             UserId = 2
                         },
                         new
                         {
                             UserRoleId = 3,
-                            ChangeDate = new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(7528),
+                            ChangeDate = new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(5419),
                             RoleId = 2,
                             UserId = 3
                         });

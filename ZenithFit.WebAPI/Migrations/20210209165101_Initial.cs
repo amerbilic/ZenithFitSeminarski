@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ZenithFit.WebAPI.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -472,10 +472,10 @@ namespace ZenithFit.WebAPI.Migrations
                 columns: new[] { "ClientID", "ClientEmail", "ClientFirstName", "ClientLastName", "ClientPhone", "ClientRegisterDate", "ClientUsername", "PasswordHash", "PasswordSalt" },
                 values: new object[,]
                 {
-                    { 1, "testing1@email.com", "Amer", "Bilic", "1233455", new DateTime(2021, 2, 4, 1, 29, 27, 519, DateTimeKind.Local).AddTicks(5160), "mobile", "qEkPhwY9P2FiDqx1Rgg26GoapxE=", "fVZy3b4Z1cvYNep/oXc7aA==" },
-                    { 2, "testing2@email.com", "Denis", "Bajrektarevic", "312314", new DateTime(2021, 2, 4, 1, 29, 27, 522, DateTimeKind.Local).AddTicks(1035), "hajfo", "r577PsUb6lkHEs32NUsQHbqEhqc=", "jpiaSiCqXBnw1z4lUnuRww==" },
-                    { 3, "testing3@email.com", "Ajdin", "Muftic", "4133211", new DateTime(2021, 2, 4, 1, 29, 27, 522, DateTimeKind.Local).AddTicks(1097), "zake123", "ZnhzTGY3bXxC4FoYf7FEzHB+w/c=", "hx1Yw2OJcF/dQGfUKNhQgg==" },
-                    { 4, "testing4@email.com", "Beze", "Kaljic", "5141231", new DateTime(2021, 2, 4, 1, 29, 27, 522, DateTimeKind.Local).AddTicks(1104), "tarke321", "r577PsUb6lkHEs32NUsQHbqEhqc=", "jpiaSiCqXBnw1z4lUnuRww==" }
+                    { 1, "testing1@email.com", "Amer", "Bilic", "1233455", new DateTime(2021, 2, 4, 17, 51, 0, 587, DateTimeKind.Local).AddTicks(2588), "mobile", "qEkPhwY9P2FiDqx1Rgg26GoapxE=", "fVZy3b4Z1cvYNep/oXc7aA==" },
+                    { 2, "testing2@email.com", "Denis", "Bajrektarevic", "312314", new DateTime(2021, 2, 4, 17, 51, 0, 589, DateTimeKind.Local).AddTicks(8996), "hajfo", "r577PsUb6lkHEs32NUsQHbqEhqc=", "jpiaSiCqXBnw1z4lUnuRww==" },
+                    { 3, "testing3@email.com", "Ajdin", "Muftic", "4133211", new DateTime(2021, 2, 4, 17, 51, 0, 589, DateTimeKind.Local).AddTicks(9058), "zake123", "ZnhzTGY3bXxC4FoYf7FEzHB+w/c=", "hx1Yw2OJcF/dQGfUKNhQgg==" },
+                    { 4, "testing4@email.com", "Beze", "Kaljic", "5141231", new DateTime(2021, 2, 4, 17, 51, 0, 589, DateTimeKind.Local).AddTicks(9065), "tarke321", "r577PsUb6lkHEs32NUsQHbqEhqc=", "jpiaSiCqXBnw1z4lUnuRww==" }
                 });
 
             migrationBuilder.InsertData(
@@ -570,10 +570,10 @@ namespace ZenithFit.WebAPI.Migrations
                 columns: new[] { "ProcurementID", "ProcurementAccountAmount", "ProcurementDate", "ProcurementNote", "ProcurementNumber", "ProcurementTax", "SupplierID", "UserID", "WarehouseID" },
                 values: new object[,]
                 {
-                    { 3, 24m, new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(6117), "This is a procurement2", "2132162", 5m, 2, 2, 2 },
-                    { 2, 23m, new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(6068), "This is a procurement1", "2132132", 5m, 1, 1, 1 },
-                    { 4, 25m, new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(6122), "This is a procurement3", "2132182", 5m, 3, 3, 3 },
-                    { 1, 230m, new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(3923), "This is a procurement", "2132152", 5m, 1, 1, 1 }
+                    { 3, 24m, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(4009), "This is a procurement2", "2132162", 5m, 2, 2, 2 },
+                    { 2, 23m, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(3954), "This is a procurement1", "2132132", 5m, 1, 1, 1 },
+                    { 4, 25m, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(4015), "This is a procurement3", "2132182", 5m, 3, 3, 3 },
+                    { 1, 230m, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(1592), "This is a procurement", "2132152", 5m, 1, 1, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -581,9 +581,9 @@ namespace ZenithFit.WebAPI.Migrations
                 columns: new[] { "UserRoleID", "ChangeDate", "RoleID", "UserID" },
                 values: new object[,]
                 {
-                    { 3, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(7528), 2, 3 },
-                    { 1, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(7141), 1, 1 },
-                    { 2, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(7515), 2, 2 }
+                    { 3, new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(5419), 2, 3 },
+                    { 1, new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(4942), 1, 1 },
+                    { 2, new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(5403), 2, 2 }
                 });
 
             migrationBuilder.InsertData(
@@ -591,10 +591,10 @@ namespace ZenithFit.WebAPI.Migrations
                 columns: new[] { "CompleteOrderID", "ClientID", "CompleteOrderDate", "CompleteOrderSent", "OrderID", "UserID" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(2251), true, 1, 1 },
-                    { 2, 2, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(3188), true, 2, 2 },
-                    { 3, 3, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(3279), true, 3, 3 },
-                    { 4, 4, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(3283), true, 4, 1 }
+                    { 3, 3, new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(1212), true, 3, 3 },
+                    { 2, 2, new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(1185), true, 2, 2 },
+                    { 1, 1, new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(171), true, 1, 1 },
+                    { 4, 4, new DateTime(2021, 2, 9, 17, 51, 0, 592, DateTimeKind.Local).AddTicks(1216), true, 4, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -613,9 +613,9 @@ namespace ZenithFit.WebAPI.Migrations
                 columns: new[] { "ProcurementDetailID", "Amount", "ArticleID", "Price", "ProcurementID" },
                 values: new object[,]
                 {
-                    { 1, 2, 1, 230m, 1 },
-                    { 2, 2, 3, 321m, 2 },
                     { 3, 3, 2, 322m, 3 },
+                    { 2, 2, 3, 321m, 2 },
+                    { 1, 2, 1, 230m, 1 },
                     { 4, 1, 1, 323m, 4 }
                 });
 
@@ -624,10 +624,20 @@ namespace ZenithFit.WebAPI.Migrations
                 columns: new[] { "RatingID", "ArticleID", "ClientID", "RatingDate", "RatingGrade" },
                 values: new object[,]
                 {
-                    { 1, 1, 1, new DateTime(2021, 2, 9, 1, 29, 27, 523, DateTimeKind.Local).AddTicks(9226), 5 },
-                    { 2, 1, 2, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(750), 4 },
-                    { 3, 2, 3, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(804), 3 },
-                    { 4, 3, 4, new DateTime(2021, 2, 9, 1, 29, 27, 524, DateTimeKind.Local).AddTicks(808), 2 }
+                    { 7, 2, 3, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8725), 3 },
+                    { 10, 3, 2, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8735), 3 },
+                    { 11, 3, 3, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8739), 3 },
+                    { 12, 3, 4, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8777), 3 },
+                    { 13, 4, 1, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8781), 3 },
+                    { 14, 4, 2, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8785), 4 },
+                    { 6, 2, 2, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8722), 3 },
+                    { 5, 2, 1, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8719), 3 },
+                    { 4, 1, 4, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8715), 3 },
+                    { 3, 1, 3, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8711), 3 },
+                    { 2, 1, 2, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8650), 4 },
+                    { 1, 1, 1, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(7394), 5 },
+                    { 8, 2, 4, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8729), 3 },
+                    { 9, 3, 1, new DateTime(2021, 2, 9, 17, 51, 0, 591, DateTimeKind.Local).AddTicks(8732), 3 }
                 });
 
             migrationBuilder.CreateIndex(
