@@ -48,9 +48,9 @@ namespace ZenithFit.WebAPI.Services
                 double similarities = 0;
                 similarities = GetSimilarities(CompoundRatings1, CompoundRatings2);
 
-                if(similarities>0.99)
+                if(similarities>0.89)
                 {
-                    Database.Articles element1 = _context.Articles.Include(x => x.Manufacturer).Where(x => x.ArticleId == item.Key).FirstOrDefault();
+                    Database.Articles element1 = _context.Articles.Include(x => x.Manufacturer).Include(x=>x.Category).Where(x => x.ArticleId == item.Key).FirstOrDefault();
                     Model.Articles element2 = new Model.Articles();
 
                     element2.ManufacturerName = element1.Manufacturer.ManufacturerName;

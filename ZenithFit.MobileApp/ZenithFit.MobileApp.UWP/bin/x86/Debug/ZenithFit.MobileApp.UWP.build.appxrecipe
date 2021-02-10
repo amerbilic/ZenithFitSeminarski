@@ -88,6 +88,9 @@
     <AppxPackagedFile Include="C:\Users\Defiance\.nuget\packages\xamarin.forms\4.8.0.1821\lib\uap10.0.16299\Xamarin.Forms.Xaml.dll">
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Defiance\.nuget\packages\xamarinfastentry.behaviors\1.1.1\lib\netstandard2.0\XamarinFastEntry.Behaviors.dll">
+      <PackagePath>XamarinFastEntry.Behaviors.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp\bin\Debug\netstandard2.0\ZenithFit.MobileApp.dll">
       <PackagePath>ZenithFit.MobileApp.dll</PackagePath>
     </AppxPackagedFile>

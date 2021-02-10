@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "L4NG1sZ7IiiouS19+fx7FfKRnl6f6yT9uLJBi9NSA5Tei5wspnAwOBpvZlHuk6EtaNbM0HFDNwgRDCcgeXuBcQ==",
+  "dgSpecHash": "4qLQJp7DUz7Err8LKPL9ze5fD6D/HU/G7bvOCOQ/7LFfefF3dXLbFyT3yZZcjJXmib+TZ/rG8C9O03hx44nUrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Defiance\\source\\repos\\ZenithFitSeminarski\\ZenithFit.MobileApp\\ZenithFit.MobileApp\\ZenithFit.MobileApp.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,9 @@
     "C:\\Users\\Defiance\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
     "C:\\Users\\Defiance\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
     "C:\\Users\\Defiance\\.nuget\\packages\\xamarin.essentials\\1.6.0\\xamarin.essentials.1.6.0.nupkg.sha512",
-    "C:\\Users\\Defiance\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512"
+    "C:\\Users\\Defiance\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512",
+    "C:\\Users\\Defiance\\.nuget\\packages\\xamarin.forms.visual.material\\4.8.0.1821\\xamarin.forms.visual.material.4.8.0.1821.nupkg.sha512",
+    "C:\\Users\\Defiance\\.nuget\\packages\\xamarinfastentry.behaviors\\1.1.1\\xamarinfastentry.behaviors.1.1.1.nupkg.sha512"
   ],
   "logs": []
 }

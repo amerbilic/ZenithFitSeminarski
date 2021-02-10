@@ -17,9 +17,9 @@ namespace ZenithFit.MobileApp.ViewModels
             InitCommand = new Command(async () => await Init());
         }
 
-        public ObservableCollection<Model.Orders> OrderList = new ObservableCollection<Model.Orders>();
+        public ObservableCollection<Model.Orders> OrderList { get; set; } = new ObservableCollection<Model.Orders>();
 
-        public ICommand InitCommand;
+        public ICommand InitCommand { get; set; }
 
         public async Task Init()
         {

@@ -18,6 +18,8 @@
           "Stripe.net": "39.31.0",
           "Xamarin.Essentials": "1.6.0",
           "Xamarin.Forms": "4.8.0.1821",
+          "Xamarin.Forms.Visual.Material": "4.8.0.1821",
+          "XamarinFastEntry.Behaviors": "1.1.1",
           "ZenithFit.Model": "1.0.0"
         },
         "runtime": {
@@ -258,6 +260,22 @@
           }
         }
       },
+      "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        }
+      },
+      "XamarinFastEntry.Behaviors/1.1.1": {
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {
+            "assemblyVersion": "1.1.1.0",
+            "fileVersion": "1.1.1.0"
+          }
+        }
+      },
       "ZenithFit.Model/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
@@ -442,6 +460,20 @@
       "sha512": "sha512-3e/5DwE/bExRLtM1tA3iI9E6TCnIF+e9+lINgwLOUs0g49ebFmQiNDXBKb06jmqqV4VyNaUGZqs0bI13ruv8bQ==",
       "path": "xamarin.forms/4.8.0.1821",
       "hashPath": "xamarin.forms.4.8.0.1821.nupkg.sha512"
+    },
+    "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-smb01yudhagQ+9zDyR+ufFYnbVUIcbKNkLMAnjD02CTB2fZVCXHKHQO3jTBpE/XybpJhzYDyLqmWH+IDFfWjeQ==",
+      "path": "xamarin.forms.visual.material/4.8.0.1821",
+      "hashPath": "xamarin.forms.visual.material.4.8.0.1821.nupkg.sha512"
+    },
+    "XamarinFastEntry.Behaviors/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wFocE4uJRpzgb5r6D2GLPa1hrR/Fs7v0r62YacxC2KxcVhV2okSGpu3/giboT5fCfHQ/8QzP4SbWi+tZnAqJOQ==",
+      "path": "xamarinfastentry.behaviors/1.1.1",
+      "hashPath": "xamarinfastentry.behaviors.1.1.1.nupkg.sha512"
     },
     "ZenithFit.Model/1.0.0": {
       "type": "project",

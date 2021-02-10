@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              x:Class="ZenithFit.MobileApp.Views.ArticleDetailsPage">
     <ContentPage.BindingContext>
-        <viewModels:ArticlesViewModel></viewModels:ArticlesViewModel>
+        <viewModels:ArticleDetailsViewModel></viewModels:ArticleDetailsViewModel>
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -50,33 +50,38 @@
                 <Label  HorizontalOptions="Center" Text="{Binding AverageRating, StringFormat='Average Rating: {0:F2} '}"></Label>
             </StackLayout>
 
-            <StackLayout IsVisible="{Binding NotRated}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                <StackLayout IsVisible="{Binding NotRated}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
 
-                <Label  HorizontalOptions="Center">Rate the article:</Label>
-                <Grid HorizontalOptions="Center" VerticalOptions="Center">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="35" ></RowDefinition>
+                    <Label  HorizontalOptions="Center">Rate the article:</Label>
+                    <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35" ></RowDefinition>
 
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="40"></ColumnDefinition>
-                        <ColumnDefinition Width="40"></ColumnDefinition>
-                        <ColumnDefinition Width="40"></ColumnDefinition>
-                        <ColumnDefinition Width="40"></ColumnDefinition>
-                        <ColumnDefinition Width="40"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Button Command="{Binding RateWith1Command}" Grid.Row="0" Grid.Column="0" FontSize="Micro" Text="1" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
-                    <Button Command="{Binding RateWith2Command}" Grid.Row="0" Grid.Column="1" FontSize="Micro" Text="2" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
-                    <Button Command="{Binding RateWith3Command}" Grid.Row="0" Grid.Column="2" FontSize="Micro" Text="3" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
-                    <Button Command="{Binding RateWith4Command}" Grid.Row="0" Grid.Column="3" FontSize="Micro" Text="4" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
-                    <Button Command="{Binding RateWith5Command}" Grid.Row="0" Grid.Column="4" FontSize="Micro" Text="5" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
-
-                </Grid>
-            </StackLayout>
-                <RelativeLayout Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="EndAndExpand" HeightRequest="150" Margin="10" >
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Command="{Binding RateWith1Command}" Grid.Row="0" Grid.Column="0" FontSize="Micro" Text="1" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
+                        <Button Command="{Binding RateWith2Command}" Grid.Row="0" Grid.Column="1" FontSize="Micro" Text="2" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
+                        <Button Command="{Binding RateWith3Command}" Grid.Row="0" Grid.Column="2" FontSize="Micro" Text="3" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
+                        <Button Command="{Binding RateWith4Command}" Grid.Row="0" Grid.Column="3" FontSize="Micro" Text="4" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
+                        <Button Command="{Binding RateWith5Command}" Grid.Row="0" Grid.Column="4" FontSize="Micro" Text="5" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Yellow" TextColor="Black"></Button>
+                    </Grid>
+                </StackLayout>
+                <RelativeLayout Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="EndAndExpand" HeightRequest="170" Margin="10" >
                     <Label HorizontalOptions="Start" VerticalOptions="EndAndExpand">Recommended articles:</Label>
-                    <ListView ItemsSource="{Binding RecommenderList}" ItemSelected="recommendedArticlesList_ItemSelected"  x:Name="recommendedArticlesList" VerticalScrollBarVisibility="Default"
-                      HasUnevenRows="True" SeparatorVisibility="None" Margin="0,33,0,0" Rotation="270" RowHeight="150">
+                    <ListView
+                            ItemsSource="{Binding RecommenderList}" ItemSelected="recommendedArticlesList_ItemSelected" x:Name="recommendedArticlesList" VerticalScrollBarVisibility="Default" HasUnevenRows="True" SeparatorVisibility="None" Margin="0,33,0,0"
+                Rotation="270"
+                RowHeight="150"
+                            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-70}"
+                            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=-0.5, Constant=70}"
+                            RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Constant=140}"
+                            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
                         <ListView.ItemTemplate>
                             <DataTemplate >
                                 <ViewCell  IsEnabled="False">
@@ -96,7 +101,7 @@
                                                 </Grid>
                                                 <Grid>
                                                     <Label  HorizontalOptions="Center" Text="{Binding ArticlePrice}" Style="{DynamicResource ListItemTextStyle}" ></Label>
-                                                    <Label>KM</Label>
+                                                    <Label>$</Label>
                                                 </Grid>
                                                 <Grid>
                                                     <Label  HorizontalOptions="Center" Text="{Binding AverageRating, StringFormat=' {0:F2} '}" ></Label>
@@ -111,7 +116,6 @@
                     </ListView>
                 </RelativeLayout>
             </Grid>
-            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

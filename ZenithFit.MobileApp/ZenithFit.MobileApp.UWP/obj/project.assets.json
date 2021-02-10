@@ -577,6 +577,30 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "XamarinFastEntry.Behaviors/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        }
+      },
       "ZenithFit.MobileApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -589,6 +613,8 @@
           "Stripe.net": "39.31.0",
           "Xamarin.Essentials": "1.6.0",
           "Xamarin.Forms": "4.8.0.1821",
+          "Xamarin.Forms.Visual.Material": "4.8.0.1821",
+          "XamarinFastEntry.Behaviors": "1.1.1",
           "ZenithFit.Model": "1.0.0"
         },
         "compile": {
@@ -1345,6 +1371,30 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "XamarinFastEntry.Behaviors/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        }
+      },
       "ZenithFit.MobileApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1357,6 +1407,8 @@
           "Stripe.net": "39.31.0",
           "Xamarin.Essentials": "1.6.0",
           "Xamarin.Forms": "4.8.0.1821",
+          "Xamarin.Forms.Visual.Material": "4.8.0.1821",
+          "XamarinFastEntry.Behaviors": "1.1.1",
           "ZenithFit.Model": "1.0.0"
         },
         "compile": {
@@ -2114,6 +2166,30 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "XamarinFastEntry.Behaviors/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        }
+      },
       "ZenithFit.MobileApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2126,6 +2202,8 @@
           "Stripe.net": "39.31.0",
           "Xamarin.Essentials": "1.6.0",
           "Xamarin.Forms": "4.8.0.1821",
+          "Xamarin.Forms.Visual.Material": "4.8.0.1821",
+          "XamarinFastEntry.Behaviors": "1.1.1",
           "ZenithFit.Model": "1.0.0"
         },
         "compile": {
@@ -2880,6 +2958,30 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "XamarinFastEntry.Behaviors/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        }
+      },
       "ZenithFit.MobileApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2892,6 +2994,8 @@
           "Stripe.net": "39.31.0",
           "Xamarin.Essentials": "1.6.0",
           "Xamarin.Forms": "4.8.0.1821",
+          "Xamarin.Forms.Visual.Material": "4.8.0.1821",
+          "XamarinFastEntry.Behaviors": "1.1.1",
           "ZenithFit.Model": "1.0.0"
         },
         "compile": {
@@ -3648,6 +3752,30 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "XamarinFastEntry.Behaviors/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        }
+      },
       "ZenithFit.MobileApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -3660,6 +3788,8 @@
           "Stripe.net": "39.31.0",
           "Xamarin.Essentials": "1.6.0",
           "Xamarin.Forms": "4.8.0.1821",
+          "Xamarin.Forms.Visual.Material": "4.8.0.1821",
+          "XamarinFastEntry.Behaviors": "1.1.1",
           "ZenithFit.Model": "1.0.0"
         },
         "compile": {
@@ -4417,6 +4547,30 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "XamarinFastEntry.Behaviors/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        }
+      },
       "ZenithFit.MobileApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -4429,6 +4583,8 @@
           "Stripe.net": "39.31.0",
           "Xamarin.Essentials": "1.6.0",
           "Xamarin.Forms": "4.8.0.1821",
+          "Xamarin.Forms.Visual.Material": "4.8.0.1821",
+          "XamarinFastEntry.Behaviors": "1.1.1",
           "ZenithFit.Model": "1.0.0"
         },
         "compile": {
@@ -5185,6 +5341,30 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "XamarinFastEntry.Behaviors/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        }
+      },
       "ZenithFit.MobileApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -5197,6 +5377,8 @@
           "Stripe.net": "39.31.0",
           "Xamarin.Essentials": "1.6.0",
           "Xamarin.Forms": "4.8.0.1821",
+          "Xamarin.Forms.Visual.Material": "4.8.0.1821",
+          "XamarinFastEntry.Behaviors": "1.1.1",
           "ZenithFit.Model": "1.0.0"
         },
         "compile": {
@@ -5954,6 +6136,30 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "XamarinFastEntry.Behaviors/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll": {}
+        }
+      },
       "ZenithFit.MobileApp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -5966,6 +6172,8 @@
           "Stripe.net": "39.31.0",
           "Xamarin.Essentials": "1.6.0",
           "Xamarin.Forms": "4.8.0.1821",
+          "Xamarin.Forms.Visual.Material": "4.8.0.1821",
+          "XamarinFastEntry.Behaviors": "1.1.1",
           "ZenithFit.Model": "1.0.0"
         },
         "compile": {
@@ -11383,6 +11591,42 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Forms.Visual.Material/4.8.0.1821": {
+      "sha512": "smb01yudhagQ+9zDyR+ufFYnbVUIcbKNkLMAnjD02CTB2fZVCXHKHQO3jTBpE/XybpJhzYDyLqmWH+IDFfWjeQ==",
+      "type": "package",
+      "path": "xamarin.forms.visual.material/4.8.0.1821",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Assets/xamarin_128x128.png",
+        "build/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
+        "buildTransitive/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Material.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Material.pdb",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoAndroid90/Xamarin.Forms.Material.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Material.pdb",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Material.pdb",
+        "lib/netstandard1.0/_._",
+        "lib/tizen40/Xamarin.Forms.Material.dll",
+        "lib/tizen40/Xamarin.Forms.Material.pdb",
+        "xamarin.forms.visual.material.4.8.0.1821.nupkg.sha512",
+        "xamarin.forms.visual.material.nuspec"
+      ]
+    },
+    "XamarinFastEntry.Behaviors/1.1.1": {
+      "sha512": "wFocE4uJRpzgb5r6D2GLPa1hrR/Fs7v0r62YacxC2KxcVhV2okSGpu3/giboT5fCfHQ/8QzP4SbWi+tZnAqJOQ==",
+      "type": "package",
+      "path": "xamarinfastentry.behaviors/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/XamarinFastEntry.Behaviors.dll",
+        "xamarinfastentry.behaviors.1.1.1.nupkg.sha512",
+        "xamarinfastentry.behaviors.nuspec"
+      ]
+    },
     "ZenithFit.MobileApp/1.0.0": {
       "type": "project",
       "path": "../ZenithFit.MobileApp/ZenithFit.MobileApp.csproj",
@@ -11399,6 +11643,8 @@
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.11",
       "Xamarin.Essentials >= 1.6.0",
       "Xamarin.Forms >= 4.8.0.1821",
+      "Xamarin.Forms.Visual.Material >= 4.8.0.1821",
+      "XamarinFastEntry.Behaviors >= 1.1.1",
       "ZenithFit.MobileApp >= 1.0.0"
     ]
   },
@@ -11457,6 +11703,14 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[4.8.0.1821, )"
+          },
+          "Xamarin.Forms.Visual.Material": {
+            "target": "Package",
+            "version": "[4.8.0.1821, )"
+          },
+          "XamarinFastEntry.Behaviors": {
+            "target": "Package",
+            "version": "[1.1.1, )"
           }
         },
         "imports": [

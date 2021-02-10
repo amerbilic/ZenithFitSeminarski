@@ -36,9 +36,10 @@ namespace ZenithFit.MobileApp.Views
             await model.Recommender();
         }
 
-        private void recommendedArticlesList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void recommendedArticlesList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            var article = e.SelectedItem as Model.Articles;
+            await Navigation.PushAsync(new ArticleDetailsPage(article));
         }
     }
 }

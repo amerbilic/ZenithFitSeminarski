@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d05KLwJHUpnncESas/Z9eBIoG0MVrd8lwIhcJ9eE/iagTpemq00e2E5uTFMFs7v/GkYdxhhmRCosGMDTE2QPVg==",
+  "dgSpecHash": "ECoaaRwk359MjqTMSFqt3cHI3MUWqqAth/xLVAvY2dDRYcOgQjnzEfd+/IorCwQBmRhBzFeWaIp/La1Y1GwPEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Defiance\\source\\repos\\ZenithFitSeminarski\\ZenithFit.MobileApp\\ZenithFit.MobileApp.Android\\ZenithFit.MobileApp.Android.csproj",
   "expectedPackageFiles": [
@@ -59,7 +59,9 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Users\\Defiance\\.nuget\\packages\\xamarin.essentials\\1.6.0\\xamarin.essentials.1.6.0.nupkg.sha512",
-    "C:\\Users\\Defiance\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512"
+    "C:\\Users\\Defiance\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512",
+    "C:\\Users\\Defiance\\.nuget\\packages\\xamarin.forms.visual.material\\4.8.0.1821\\xamarin.forms.visual.material.4.8.0.1821.nupkg.sha512",
+    "C:\\Users\\Defiance\\.nuget\\packages\\xamarinfastentry.behaviors\\1.1.1\\xamarinfastentry.behaviors.1.1.1.nupkg.sha512"
   ],
   "logs": []
 }

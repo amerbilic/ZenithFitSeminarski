@@ -13,7 +13,7 @@ namespace ZenithFit.MobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OrderHistoryPage : ContentPage
     {
-        OrderHistoryViewModel model = null;
+        private OrderHistoryViewModel model = null;
         public OrderHistoryPage()
         {
             InitializeComponent();

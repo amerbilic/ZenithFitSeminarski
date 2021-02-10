@@ -93,3 +93,4 @@ C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit
 C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp.UWP\obj\x86\Debug\FxResources.System.Security.Cryptography.ProtectedData.SR.resw
 C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp.UWP\obj\x86\Debug\resources.en.resfiles
 C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp.UWP\obj\x86\Debug\resources.en.resfiles.intermediate
+C:\Users\Defiance\source\repos\ZenithFitSeminarski\ZenithFit.MobileApp\ZenithFit.MobileApp.UWP\bin\x86\Debug\XamarinFastEntry.Behaviors.dll

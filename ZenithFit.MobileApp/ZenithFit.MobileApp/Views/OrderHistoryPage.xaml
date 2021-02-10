@@ -15,7 +15,7 @@
                 HorizontalTextAlignment="Center"
                 FontAttributes="Bold"
                 FontSize="27" BackgroundColor="DarkSlateGray" TextColor="Wheat"/>
-            <ListView ItemsSource="{Binding OrderList}" ItemSelected="ListView_ItemSelected">
+            <ListView ItemsSource="{Binding OrderList}}" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
