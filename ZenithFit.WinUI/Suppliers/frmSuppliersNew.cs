@@ -105,7 +105,7 @@ namespace ZenithFit.WinUI.Suppliers
 
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || !txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
             {
                 errorProvider.SetError(txtEmail, Properties.Resources.Validation_RequiredField);
                 e.Cancel = true;
