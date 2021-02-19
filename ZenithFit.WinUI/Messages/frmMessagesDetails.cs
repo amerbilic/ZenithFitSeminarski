@@ -53,6 +53,8 @@ namespace ZenithFit.WinUI.Messages
             };
             await _serviceMessages.Insert<Model.Messages>(newMessage);
             await LoadMessages();
+            MessageBox.Show("Success");
+
 
         }
     }

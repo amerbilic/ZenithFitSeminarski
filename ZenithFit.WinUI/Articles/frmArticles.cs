@@ -80,6 +80,8 @@ namespace ZenithFit.WinUI.Articles
 
             await _Articles.Insert<Model.Articles>(request);
 
+            MessageBox.Show("Success");
+
         }
 
         public static byte[] ImageToByteArray(Image x)
