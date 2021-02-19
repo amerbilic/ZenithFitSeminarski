@@ -34,6 +34,8 @@ namespace ZenithFit.WinUI
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.articlesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +58,8 @@ namespace ZenithFit.WinUI
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.messagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -64,12 +68,14 @@ namespace ZenithFit.WinUI
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usersToolStripMenuItem,
+            this.clientsToolStripMenuItem,
             this.articlesToolStripMenuItem,
             this.procurementsToolStripMenuItem,
             this.warehousesToolStripMenuItem,
             this.suppliersToolStripMenuItem,
             this.manufacturersToolStripMenuItem,
             this.ordersToolStripMenuItem,
+            this.messagesToolStripMenuItem,
             this.reportsToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -99,6 +105,21 @@ namespace ZenithFit.WinUI
             this.newUserToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.newUserToolStripMenuItem.Text = "New User";
             this.newUserToolStripMenuItem.Click += new System.EventHandler(this.newUserToolStripMenuItem_Click);
+            // 
+            // clientsToolStripMenuItem
+            // 
+            this.clientsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchToolStripMenuItem8});
+            this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
+            this.clientsToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.clientsToolStripMenuItem.Text = "Clients";
+            // 
+            // searchToolStripMenuItem8
+            // 
+            this.searchToolStripMenuItem8.Name = "searchToolStripMenuItem8";
+            this.searchToolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem8.Text = "Search";
+            this.searchToolStripMenuItem8.Click += new System.EventHandler(this.searchToolStripMenuItem8_Click);
             // 
             // articlesToolStripMenuItem
             // 
@@ -261,6 +282,21 @@ namespace ZenithFit.WinUI
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // messagesToolStripMenuItem
+            // 
+            this.messagesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewToolStripMenuItem});
+            this.messagesToolStripMenuItem.Name = "messagesToolStripMenuItem";
+            this.messagesToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.messagesToolStripMenuItem.Text = "Messages";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +346,10 @@ namespace ZenithFit.WinUI
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem messagesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
     }
 }
 

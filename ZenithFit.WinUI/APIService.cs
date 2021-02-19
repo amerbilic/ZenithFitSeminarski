@@ -40,6 +40,19 @@ namespace ZenithFit.WinUI
             
         }
 
+        public async Task<T> GetBestSeller<T>()
+        {
+
+            var url = $"{Properties.Settings.Default.APIUrl}/{_route}";
+
+            var result = await url.WithBasicAuth(Username, Password).GetJsonAsync<T>();
+
+            return result;
+
+
+
+        }
+
         public async Task<T> GetbyId<T>(object id)
         {
 

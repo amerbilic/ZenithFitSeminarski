@@ -45,6 +45,9 @@ namespace ZenithFit.MobileApp.Views
                     case (int)MenuItemType.Goals:
                         MenuPages.Add(id, new NavigationPage(new GoalsPage()));
                         break;
+                    case (int)MenuItemType.Messages:
+                        MenuPages.Add(id, new NavigationPage(new ConversationPage()));
+                        break;
                 }
             }
 

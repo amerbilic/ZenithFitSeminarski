@@ -34,7 +34,8 @@ namespace ZenithFit.WebAPI.Database
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<Warehouses> Warehouses { get; set; }
         public virtual DbSet<GoalsChoices> GoalsChoices { get; set; }
-
+        public virtual DbSet<Messages> Messages { get; set; }
+        public virtual DbSet<Comments> Comments { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

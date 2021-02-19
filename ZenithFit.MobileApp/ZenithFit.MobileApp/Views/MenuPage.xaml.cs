@@ -27,6 +27,7 @@ namespace ZenithFit.MobileApp.Views
                 new HomeMenuItem {Id = MenuItemType.Orders, Title="Orders" },
                 new HomeMenuItem {Id = MenuItemType.OrderHistory, Title="Order history" },
                 new HomeMenuItem {Id = MenuItemType.Goals, Title="My Goals" },
+                new HomeMenuItem {Id = MenuItemType.Messages, Title="Messages"},
 
             };
 

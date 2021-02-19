@@ -49,6 +49,15 @@ namespace ZenithFit.MobileApp.ViewModels
                 }
             }
 
+            if(SelectedCategory == null)
+            {
+                var list = await _ArticlesService.Get<IEnumerable<Articles>>(null);
+                ArticlesList.Clear();
+                foreach (var article in list)
+                {
+                    ArticlesList.Add(article);
+                }
+            }
             if(SelectedCategory!=null)
             {
                 CategoriesSearchRequest search = new CategoriesSearchRequest();

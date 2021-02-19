@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 using ZenithFit.Model;
+using ZenithFit.Model.Requests;
 
 namespace ZenithFit.MobileApp.ViewModels
 {
@@ -15,26 +16,38 @@ namespace ZenithFit.MobileApp.ViewModels
         private readonly APIService _ArticleService = new APIService("Articles");
         private readonly APIService _RatingsService = new APIService("Ratings");
         private readonly APIService _RecommenderService = new APIService("Recommender");
-
+        private readonly APIService _CommentsService = new APIService("Comments");
+        private string _commentText;
         public ArticleDetailsViewModel()
         {
             IncreaseQuantityCommand = new Command(() => Quantity += 1);
             DecreaseQuantityCommand = new Command(() => { if (Quantity > 0) { Quantity -= 1; } });
             OrderCommand = new Command(Order);
+            InitCommand = new Command(async () => await Init());
             RateWith1Command = new Command(async () => await Rate(1));
             RateWith2Command = new Command(async () => await Rate(2));
             RateWith3Command = new Command(async () => await Rate(3));
             RateWith4Command = new Command(async () => await Rate(4));
             RateWith5Command = new Command(async () => await Rate(5));
             RecommenderCommand = new Command(async () => await Recommender());
+            SendCommand = new Command(async () => await Send());
         }
 
         public Articles Article { get; set; }
+
+        public ObservableCollection<Comments> CommentsList { get; set; } = new ObservableCollection<Comments>();
         public ObservableCollection<Ratings> ArticleRatingsList { get; set; } = new ObservableCollection<Ratings>();
         public ObservableCollection<Articles> ArticleList { get; set; } = new ObservableCollection<Articles>();
         public ObservableCollection<Articles> RecommenderList { get; set; } = new ObservableCollection<Articles>();
 
         decimal _quantity = 0;
+
+        public string CommentText
+        {
+            get { return _commentText; }
+            set { SetProperty(ref _commentText, value); }
+        }
+
         public decimal Quantity
         {
             get { return _quantity; }
@@ -60,7 +73,25 @@ namespace ZenithFit.MobileApp.ViewModels
             get { return _NotRated; }
             set { SetProperty(ref _NotRated, value); }
         }
-        
+
+        async Task Send()
+        {
+            if (!string.IsNullOrWhiteSpace(CommentText))
+            {
+                var request = new CommentsInsertRequest()
+                {
+                    ArticleId = Article.ArticleID,
+                    ClientId = LoggedInUser.ActiveClient.ClientId,
+                    Text = CommentText,
+                    CommentDate = DateTime.Now
+                };
+                var p = await _CommentsService.Insert<Model.Comments>(request);
+                var search = new CommentsSearchRequest { ArticleId = Article.ArticleID };
+                var nesto = await _CommentsService.Get<List<Model.Comments>>(search);
+                CommentsList.Add(nesto[nesto.Count-1]);
+            }
+        }
+
         public async Task Recommender()
         {
             RecommenderList.Clear();
@@ -91,7 +122,14 @@ namespace ZenithFit.MobileApp.ViewModels
         }
         public async Task Init()
         {
+            CommentsList.Clear();
             var Ratinglist = await _RatingsService.Get<List<Model.Ratings>>(null);
+            var search = new CommentsSearchRequest {ArticleId = Article.ArticleID};
+            var CommentList = await _CommentsService.Get<List<Comments>>(search);
+            foreach(var item in CommentList)
+            {
+                CommentsList.Add(item);
+            }
             Rated = false;
             foreach(var item in Ratinglist)
             {
@@ -134,6 +172,7 @@ namespace ZenithFit.MobileApp.ViewModels
             
         }
 
+        public ICommand SendCommand { get; private set; }
         public ICommand IncreaseQuantityCommand { get; set; }
         public ICommand DecreaseQuantityCommand { get; set; }
         public ICommand OrderCommand { get; set; }
@@ -142,6 +181,7 @@ namespace ZenithFit.MobileApp.ViewModels
         public ICommand RateWith3Command { get; set; }
         public ICommand RateWith4Command { get; set; }
         public ICommand RateWith5Command { get; set; }
+        public ICommand InitCommand { get; set; }
 
         public ICommand RecommenderCommand { get; set; }
 

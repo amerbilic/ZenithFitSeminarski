@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -55,8 +56,6 @@ namespace ZenithFit.WinUI.Users
         private async void frmUsersDetails_LoadAsync(object sender, EventArgs e)
         {
             var roles = _serviceRoles.Get<List<Model.Roles>>(null);
-            clbRoles.DisplayMember = "RoleName";
-            clbRoles.DataSource = roles;
             if(_id.HasValue)
             {
                 var user = await _service.GetbyId<Model.Users>(_id);
@@ -93,6 +92,61 @@ namespace ZenithFit.WinUI.Users
             else
             {
                 errorProvider.SetError(txtUserLastName, null);
+            }
+        }
+
+        private void txtUserEmail_Validating(object sender, CancelEventArgs e)
+        {
+            var foo = new EmailAddressAttribute();
+            bool bar;
+            bar = foo.IsValid(txtUserEmail.Text);
+            if (string.IsNullOrWhiteSpace(txtUserEmail.Text) || bar == false)
+            {
+                errorProvider.SetError(txtUserEmail, Properties.Resources.Validation_RequiredField);
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(txtUserEmail, null);
+            }
+        }
+
+        private void txtUsername_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                errorProvider.SetError(txtUsername, Properties.Resources.Validation_RequiredField);
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(txtUsername, null);
+            }
+        }
+
+        private void txtUserPhone_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUserPhone.Text))
+            {
+                errorProvider.SetError(txtUserPhone, Properties.Resources.Validation_RequiredField);
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(txtUserPhone, null);
+            }
+        }
+
+        private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtConfirmPassword.Text) || txtConfirmPassword.Text != txtPassword.Text)
+            {
+                errorProvider.SetError(txtConfirmPassword, Properties.Resources.Validation_RequiredField);
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(txtUserPhone, null);
             }
         }
     }

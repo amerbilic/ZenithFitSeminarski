@@ -7,6 +7,8 @@ namespace ZenithFit.Model.Requests
     public class ClientsSearchRequest
     {
         public string ClientName { get; set; }
-        public string ClientLastName { get; set; }
+        public string UserName { get; set; }
+
+
     }
 }

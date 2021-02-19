@@ -46,7 +46,6 @@ namespace ZenithFit.WinUI.Users
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.clbRoles = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +98,7 @@ namespace ZenithFit.WinUI.Users
             this.txtUserEmail.Name = "txtUserEmail";
             this.txtUserEmail.Size = new System.Drawing.Size(351, 20);
             this.txtUserEmail.TabIndex = 4;
+            this.txtUserEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserEmail_Validating);
             // 
             // lblUserPhone
             // 
@@ -115,6 +115,7 @@ namespace ZenithFit.WinUI.Users
             this.txtUserPhone.Name = "txtUserPhone";
             this.txtUserPhone.Size = new System.Drawing.Size(351, 20);
             this.txtUserPhone.TabIndex = 6;
+            this.txtUserPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserPhone_Validating);
             // 
             // lblUsername
             // 
@@ -131,6 +132,7 @@ namespace ZenithFit.WinUI.Users
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(351, 20);
             this.txtUsername.TabIndex = 8;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
             // 
             // lblPassword
             // 
@@ -163,10 +165,11 @@ namespace ZenithFit.WinUI.Users
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(148, 20);
             this.txtConfirmPassword.TabIndex = 12;
+            this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(323, 418);
+            this.btnSubmit.Location = new System.Drawing.Point(300, 324);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 14;
@@ -178,20 +181,11 @@ namespace ZenithFit.WinUI.Users
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // clbRoles
-            // 
-            this.clbRoles.FormattingEnabled = true;
-            this.clbRoles.Location = new System.Drawing.Point(24, 318);
-            this.clbRoles.Name = "clbRoles";
-            this.clbRoles.Size = new System.Drawing.Size(351, 79);
-            this.clbRoles.TabIndex = 15;
-            // 
             // frmUsersDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 450);
-            this.Controls.Add(this.clbRoles);
+            this.ClientSize = new System.Drawing.Size(410, 364);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.txtConfirmPassword);
@@ -234,6 +228,5 @@ namespace ZenithFit.WinUI.Users
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.CheckedListBox clbRoles;
     }
 }

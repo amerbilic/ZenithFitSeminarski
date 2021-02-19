@@ -32,7 +32,7 @@ namespace ZenithFit.MobileApp.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            await model.Init();
+            model.InitCommand.Execute(null);
             await model.Recommender();
         }
 
@@ -40,6 +40,18 @@ namespace ZenithFit.MobileApp.Views
         {
             var article = e.SelectedItem as Model.Articles;
             await Navigation.PushAsync(new ArticleDetailsPage(article));
+        }
+
+        private async void Send_Button_Clicked(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(model.CommentText))
+            {
+                 model.InitCommand.Execute(null);
+            }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Comment must not be empty", "OK");
+            }
         }
     }
 }

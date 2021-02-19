@@ -36,7 +36,6 @@ namespace ZenithFit.WebAPI.Controllers
             return _service.GetbyId(id);
         }
 
-        [Authorize]
         [HttpPost]
         public Model.Users Insert(UsersInsertRequest request)
         {

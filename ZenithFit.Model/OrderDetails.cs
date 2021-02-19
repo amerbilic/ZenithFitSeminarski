@@ -12,7 +12,7 @@ namespace ZenithFit.Model
         public decimal Price { get; set; }
         public decimal? Discount { get; set; }
         public int? ArticleId { get; set; }
-        public string ArticleCode { get; set; }
-        public string ArticleName { get; set; }
+        public string ArticleArticleCode { get; set; }
+        public string ArticleArticleName { get; set; }
     }
 }

@@ -32,18 +32,13 @@ namespace ZenithFit.WinUI.Users
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvKorisnici = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserRegisteredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserStatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.OrdersMade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
@@ -68,8 +63,7 @@ namespace ZenithFit.WinUI.Users
             this.Username,
             this.UserEmail,
             this.UserPhone,
-            this.UserRegisteredDate,
-            this.UserStatus});
+            this.OrdersMade});
             this.dgvKorisnici.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKorisnici.Location = new System.Drawing.Point(3, 16);
             this.dgvKorisnici.Name = "dgvKorisnici";
@@ -81,7 +75,7 @@ namespace ZenithFit.WinUI.Users
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(396, 36);
+            this.btnSearch.Location = new System.Drawing.Point(123, 33);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
@@ -89,53 +83,21 @@ namespace ZenithFit.WinUI.Users
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(12, 38);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(102, 20);
-            this.txtSearch.TabIndex = 2;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(9, 22);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
-            this.lblName.TabIndex = 3;
-            this.lblName.Text = "Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(135, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Registered date";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(138, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
-            this.textBox1.TabIndex = 4;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(265, 22);
+            this.label2.Location = new System.Drawing.Point(12, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Username";
             // 
-            // textBox2
+            // txtSearch
             // 
-            this.textBox2.Location = new System.Drawing.Point(268, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(102, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtSearch.Location = new System.Drawing.Point(15, 36);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(102, 20);
+            this.txtSearch.TabIndex = 6;
             // 
             // UserID
             // 
@@ -166,19 +128,12 @@ namespace ZenithFit.WinUI.Users
             this.UserPhone.Name = "UserPhone";
             this.UserPhone.ReadOnly = true;
             // 
-            // UserRegisteredDate
+            // OrdersMade
             // 
-            this.UserRegisteredDate.DataPropertyName = "UserRegisteredDate";
-            this.UserRegisteredDate.HeaderText = "Registered";
-            this.UserRegisteredDate.Name = "UserRegisteredDate";
-            this.UserRegisteredDate.ReadOnly = true;
-            // 
-            // UserStatus
-            // 
-            this.UserStatus.DataPropertyName = "UserStatus";
-            this.UserStatus.HeaderText = "Active";
-            this.UserStatus.Name = "UserStatus";
-            this.UserStatus.ReadOnly = true;
+            this.OrdersMade.DataPropertyName = "NumberOfOrders";
+            this.OrdersMade.HeaderText = "OrdersMade";
+            this.OrdersMade.Name = "OrdersMade";
+            this.OrdersMade.ReadOnly = true;
             // 
             // frmUsers
             // 
@@ -186,10 +141,6 @@ namespace ZenithFit.WinUI.Users
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.groupBox1);
@@ -207,17 +158,12 @@ namespace ZenithFit.WinUI.Users
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvKorisnici;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserRegisteredDate;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn UserStatus;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrdersMade;
     }
 }

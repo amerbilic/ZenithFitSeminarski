@@ -13,21 +13,20 @@ namespace ZenithFit.MobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OrderHistoryDetailsPage : ContentPage
     {
-       
-        OrderHistoryDetailsViewModel model = null;
+
+        private OrderHistoryDetailsViewModel model { get { return BindingContext as OrderHistoryDetailsViewModel; } set { BindingContext = value; } }
         public OrderHistoryDetailsPage(Model.Orders order)
         {
             InitializeComponent();
-            BindingContext = model = new OrderHistoryDetailsViewModel { 
+            model = new OrderHistoryDetailsViewModel { 
             Order = order};
         }
 
-        protected async override void OnAppearing()
+        protected  override void OnAppearing()
         {
             base.OnAppearing();
-            await model.Init();
+            model.InitCommand.Execute(null);
         }
-
 
     }
 

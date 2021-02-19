@@ -125,7 +125,7 @@ namespace ZenithFit.WinUI.Articles
 
         private void txtArticleCode_Validating(object sender, CancelEventArgs e)
         {
-            if(!string.IsNullOrWhiteSpace(txtArticleCode.Text))
+            if(string.IsNullOrWhiteSpace(txtArticleCode.Text))
             {
                 errorProvider.SetError(txtArticleCode, Properties.Resources.Validation_RequiredField);
                 e.Cancel = true;

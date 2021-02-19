@@ -14,7 +14,7 @@ namespace ZenithFit.WebAPI.Services
     {
         private readonly ZenithFitDatabaseContext _context;
         private readonly IMapper _mapper;
-        
+
         public ClientService(ZenithFitDatabaseContext context, IMapper mapper)
         {
             _context = context;
@@ -43,20 +43,31 @@ namespace ZenithFit.WebAPI.Services
         public List<Model.Clients> Get(ClientsSearchRequest search)
         {
             var query = _context.Clients.AsQueryable();
-
+            var orderquery = _context.Orders.AsQueryable();
+            var ratingsquery = _context.Ratings.AsQueryable();
             if (!string.IsNullOrWhiteSpace(search?.ClientName))
             {
                 query = query.Where(x => x.ClientFirstName.StartsWith(search.ClientName));
+
+                
             }
 
-            if(!string.IsNullOrWhiteSpace(search?.ClientLastName))
+            if(!string.IsNullOrWhiteSpace(search?.UserName))
             {
-                query = query.Where(x => x.ClientLastName.StartsWith(search.ClientLastName));
+                query = query.Where(x => x.ClientUsername.StartsWith(search.UserName));
             }
 
             var list = query.ToList();
+            var returnModel = _mapper.Map<List<Model.Clients>>(list);
+            foreach (var client in returnModel)
+            {
+                var NumOfOrders = orderquery.Count(x => x.ClientId == client.ClientId);
+                var NumOfRatings = ratingsquery.Count(x => x.ClientId == client.ClientId);
+                client.NumberOfOrders = NumOfOrders;
+                client.NumberOfRatings = NumOfRatings;
+            }
 
-            return _mapper.Map<List<Model.Clients>>(list);
+            return returnModel;
         }
 
         public Model.Clients GetById(int id)

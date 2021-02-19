@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZenithFit.WinUI.Articles;
 using ZenithFit.WinUI.Categories;
+using ZenithFit.WinUI.Clients;
 using ZenithFit.WinUI.Manufacturers;
+using ZenithFit.WinUI.Messages;
 using ZenithFit.WinUI.Orders;
 using ZenithFit.WinUI.Procurements;
 using ZenithFit.WinUI.Reports;
@@ -206,6 +208,18 @@ namespace ZenithFit.WinUI
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReportsIndex frm = new frmReportsIndex();
+            frm.Show();
+        }
+
+        private void searchToolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            frmClientsSearch frm = new frmClientsSearch();
+            frm.Show();
+        }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMessagesView frm = new frmMessagesView();
             frm.Show();
         }
     }

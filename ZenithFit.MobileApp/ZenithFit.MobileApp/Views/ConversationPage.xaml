@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:ZenithFit.MobileApp.ViewModels;assembly=ZenithFit.MobileApp"
+             mc:Ignorable="d"
+             x:Class="ZenithFit.MobileApp.Views.ConversationPage"
+             Title="Messages">
+    <ContentPage.BindingContext>
+        <viewModels:ConversationViewModel></viewModels:ConversationViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="10" HorizontalOptions="FillAndExpand" BackgroundColor="WhiteSmoke">
+            <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center"></ActivityIndicator>
+            <Label Text="No messages between you and the employee" TextColor="CadetBlue" FontSize="Large" IsVisible="{Binding ShowNoMessages}" ></Label>
+            <ListView ItemsSource="{Binding AllMessages}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="10" BackgroundColor="GhostWhite">
+                                <Label Text="{Binding Username, StringFormat=' {0}:'}"
+                                 LineBreakMode="NoWrap" 
+                                 Style="{DynamicResource ListItemTextStyle}" 
+                                 TextColor="CadetBlue" 
+                                 FontSize="Large">
+                                </Label>
+                                <Label Text="{Binding Message}"
+                                 LineBreakMode="NoWrap"
+                                 Style="{DynamicResource ListItemDetailTextStyle}"
+                                 TextColor="CadetBlue" 
+                                 FontSize="13">
+                                </Label>
+                                <Label Text="{Binding SentDate}"
+                                 LineBreakMode="WordWrap"
+                                 TextColor="CadetBlue" 
+                                 Style="{DynamicResource ListItemDetailTextStyle}"
+                                 FontSize="10">
+                                </Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry x:Name="NewMessage" Placeholder="Type your message..." Text="{Binding MessageText}" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="Send_Button" BorderRadius="0" BackgroundColor="CadetBlue"  Text="Send" Command="{Binding SendCommand}" Clicked="Send_Button_Clicked_1" HorizontalOptions="End"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

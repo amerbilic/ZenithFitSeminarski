@@ -12,6 +12,7 @@ namespace ZenithFit.Model
         public string UserEmail { get; set; }
         public string UserPhone { get; set; }
         public string UserUsername { get; set; }
+        public int NumberOfOrders { get; set; }
         public List<UserRoles> UserRoles { get; set; }
     }
 }

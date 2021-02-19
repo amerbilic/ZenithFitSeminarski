@@ -71,7 +71,7 @@ namespace ZenithFit.WebAPI
             services.AddScoped<IUsersService, UsersService>();
             services.AddScoped<IRolesService, RolesService>();
             //Articles
-            services.AddScoped<ICRUDService<Model.Articles, ArticlesSearchRequest, ArticlesUpsertRequest, ArticlesUpsertRequest>, ArticlesService>();
+            services.AddScoped<IArticlesService, ArticlesService>();
             //Manufacturers
             services.AddScoped<ICRUDService<Model.Manufacturers, object, ManufacturersInsertRequest, object>, ManufacturersService>();
             //Categories
@@ -94,8 +94,11 @@ namespace ZenithFit.WebAPI
             services.AddScoped<ICRUDService<Model.ProcurementDetails, object, ProcurementDetailsInsertRequest, object>, ProcurementDetailsService>();
             //Warehouses
             services.AddScoped<ICRUDService<Model.Warehouses, WarehousesSearchRequest, WarehousesInsertRequest, object>, WarehousesService>();
+            //Messages
+            services.AddScoped<IMessagesService, MessagesService>();
             services.AddScoped<IRecommender, RecommenderService>();
             services.AddScoped<ICRUDService<Model.GoalsChoices,object,object,object>, GoalsService>();
+            services.AddScoped<ICRUDService<Model.Comments,CommentsSearchRequest,CommentsInsertRequest,object>,CommentsService>();
             //Context
             services.AddScoped<IService<Model.Roles, object>, BaseService<Model.Roles,object,Database.Roles>>();
             services.AddDbContext<ZenithFitDatabaseContext>(options => options.UseSqlServer(connection));

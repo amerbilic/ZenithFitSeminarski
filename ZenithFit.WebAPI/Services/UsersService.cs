@@ -25,6 +25,7 @@ namespace ZenithFit.WebAPI.Services
         public List<Model.Users> Get(UsersSearchRequest request)
         {
             var query = _context.Users.AsQueryable();
+            var orderquery = _context.Orders.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(request?.UserFirstName))
             {
@@ -38,7 +39,14 @@ namespace ZenithFit.WebAPI.Services
 
             var list = query.ToList();
 
-            return _mapper.Map<List<Model.Users>>(list);
+            var returnModel = _mapper.Map<List<Model.Users>>(list);
+            foreach (var user in returnModel)
+            {
+                var NumOfOrders = orderquery.Count(x => x.UserId == user.UserId);
+                user.NumberOfOrders = NumOfOrders;
+
+            }
+            return returnModel;
         }
 
 

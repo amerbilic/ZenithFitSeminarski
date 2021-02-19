@@ -11,6 +11,7 @@ namespace ZenithFit.MobileApp.Models
         Orders,
         OrderHistory,
         Goals,
+        Messages
     }
     public class HomeMenuItem
     {

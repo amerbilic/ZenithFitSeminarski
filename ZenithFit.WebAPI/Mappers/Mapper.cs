@@ -57,7 +57,12 @@ namespace ZenithFit.WebAPI.Mappers
             CreateMap<Database.Ratings, RatingsInsertRequest>().ReverseMap();
             //Goals
             CreateMap<Database.GoalsChoices, Model.GoalsChoices>();
-
+            //
+            CreateMap<Database.Messages, Model.Messages>();
+            CreateMap<Database.Messages, MessagesInsertRequest>().ReverseMap();
+            //
+            CreateMap<Database.Comments, Model.Comments>();
+            CreateMap<Database.Comments, CommentsInsertRequest>().ReverseMap();
 
         }
     }

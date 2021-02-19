@@ -12,9 +12,10 @@ namespace ZenithFit.WebAPI.Controllers
 {
     public class ArticlesController : BaseCRUDController<Model.Articles, ArticlesSearchRequest, Model.Requests.ArticlesUpsertRequest, Model.Requests.ArticlesUpsertRequest>
     {
-        public ArticlesController(ICRUDService<Articles, ArticlesSearchRequest, ArticlesUpsertRequest, ArticlesUpsertRequest> service) : base(service)
+        public ArticlesController(IArticlesService service) : base(service) 
         {
         }
+
 
     }
 }

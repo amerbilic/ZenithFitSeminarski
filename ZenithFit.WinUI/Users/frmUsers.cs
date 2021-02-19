@@ -38,6 +38,7 @@ namespace ZenithFit.WinUI.Users
             dgvKorisnici.DataSource = result;
 
 
+
         }
 
         private void dgvKorisnici_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -47,5 +48,7 @@ namespace ZenithFit.WinUI.Users
             frmUsersDetails frm = new frmUsersDetails(int.Parse(id.ToString()));
             frm.Show();
         }
+
+
     }
 }

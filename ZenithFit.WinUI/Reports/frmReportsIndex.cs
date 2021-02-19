@@ -37,92 +37,41 @@ namespace ZenithFit.WinUI.Reports
             printPreviewDialog1.ShowDialog();
         }
 
-        private void btnOrders_Click(object sender, EventArgs e)
-        {
-            dtpFrom.Enabled = true;
-            dtpTo.Enabled = true;
-            lbl1.Enabled = true;
-            lbl2.Enabled = true;
-            txtOrderNo.Enabled = true;
-            btnSearch.Enabled = true;
-            dataGridView1.DataSource = null;
-            txtOrderNo.Text = "";
-        }
-
         private async void btnArticles_Click(object sender, EventArgs e)
         {
-            dtpFrom.Enabled = false;
-            dtpTo.Enabled = false;
-            txtOrderNo.Enabled = false;
-            btnSearch.Enabled = false;
 
             List<Model.SoldArticles> sold = new List<Model.SoldArticles>();
             List<Model.Articles> articleList = await _serviceArticles.Get<List<Model.Articles>>(null);
             List<Model.OrderDetails> orderList = await _serviceOrderDetails.Get<List<Model.OrderDetails>>(null);
 
-            foreach (var item1 in orderList)
-            {
-                foreach (var item2 in articleList)
-                {
-                    if (item1.ArticleId == item2.ArticleID)
-                    {
-                        Model.SoldArticles S1 = new Model.SoldArticles
-                        {
-                            ArticlePrice = item1.Price,
-                            Amount = item1.Amount,
-                            ArticleName = item2.ArticleName,
-                            ArticleCode = item2.ArticleCode,
-                            TotalPrice = item1.Amount * item1.Price
-                        };
-                        var exists = false;
-                        foreach (var item3 in sold)
-                        {
-                            if (item3.ArticleName.Equals(S1.ArticleName))
-                            {
-                                exists = true;
-                                item3.Amount += S1.Amount;
-                                item3.TotalPrice += item3.ArticlePrice * S1.Amount;
-                            }
-                        }
-                        if (exists == false)
-                        {
-                            sold.Add(S1);
-                        }
-                    }
+            List<Model.BestSoldArticle> query = await _serviceArticles.GetBestSeller<List<Model.BestSoldArticle>>();
+            List<Model.OrderDetails> orders = await _serviceOrderDetails.Get<List<Model.OrderDetails>>(null);
+            var returnList = new List<Model.BestSoldArticle>();
 
+            foreach (var artikal in query)
+            {
+                int TimesOrdered = 0;
+                int ArticleSold = 0;
+                TimesOrdered = orders.Where(x => x.ArticleId == artikal.ArticleID).Count();
+                var listOrders = orders.Where(x => x.ArticleId == artikal.ArticleID).ToList();
+                foreach (var item in listOrders)
+                {
+                    ArticleSold += item.Amount;
                 }
-            }
-            dataGridView1.DataSource = sold;
-        }
-
-        private async void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (dtpFrom.Enabled == true && dtpTo.Enabled == true && txtOrderNo.Enabled == true)
-            {
-                var search = new OrdersSearchRequest()
+                var returnArticle = new Model.BestSoldArticle()
                 {
-                    OrderNumber = txtOrderNo.Text
+                    OrderedTimes = TimesOrdered,
+                    AmountSold = ArticleSold,
+                    ArticleCode = artikal.ArticleCode,
+                    ArticleID = artikal.ArticleID,
+                    ArticleName = artikal.ArticleName,
+                    ArticlePrice = artikal.ArticlePrice
                 };
-
-                var orderList = await _serviceOrders.Get<List<Model.Orders>>(search);
-                List<Model.OrdersReport> result = new List<Model.OrdersReport>();
-
-                foreach (var item in orderList)
-                {
-                    if (dtpFrom.Value < item.OrderDate && item.OrderDate < dtpTo.Value)
-                    {
-                        result.Add(new Model.OrdersReport
-                        {
-                            OrderNumber = item.OrderNumber,
-                            Date = item.OrderDate,
-                            AmountWithNoTax = item.OrderPriceNoTax,
-                            AmountWithTax = item.OrderPriceTax
-                        });
-                    }
-                }
-                dataGridView1.DataSource = result;
+                returnList = returnList.OrderByDescending(x => x.AmountSold).ToList();
+                returnList.Add(returnArticle);
             }
-        
-    }
-    }
-    }
+            dataGridView1.DataSource = returnList;
+
+        }
+    }  
+}
