@@ -40,9 +40,12 @@ namespace ZenithFit.WinUI.Warehouses
             // 
             // dgvWarehouses
             // 
+            this.dgvWarehouses.AllowUserToAddRows = false;
+            this.dgvWarehouses.AllowUserToDeleteRows = false;
             this.dgvWarehouses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvWarehouses.Location = new System.Drawing.Point(12, 78);
             this.dgvWarehouses.Name = "dgvWarehouses";
+            this.dgvWarehouses.ReadOnly = true;
             this.dgvWarehouses.Size = new System.Drawing.Size(677, 285);
             this.dgvWarehouses.TabIndex = 0;
             // 

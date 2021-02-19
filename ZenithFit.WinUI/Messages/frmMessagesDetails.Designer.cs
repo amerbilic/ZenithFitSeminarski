@@ -31,10 +31,10 @@ namespace ZenithFit.WinUI.Messages
         {
             this.txtSendMessage = new System.Windows.Forms.TextBox();
             this.dgvMessages = new System.Windows.Forms.DataGridView();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.lbl = new System.Windows.Forms.Label();
             this.Message = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.lbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMessages)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,14 +47,31 @@ namespace ZenithFit.WinUI.Messages
             // 
             // dgvMessages
             // 
+            this.dgvMessages.AllowUserToAddRows = false;
+            this.dgvMessages.AllowUserToDeleteRows = false;
             this.dgvMessages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMessages.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Message,
             this.SentDate});
             this.dgvMessages.Location = new System.Drawing.Point(12, 12);
             this.dgvMessages.Name = "dgvMessages";
+            this.dgvMessages.ReadOnly = true;
             this.dgvMessages.Size = new System.Drawing.Size(776, 178);
             this.dgvMessages.TabIndex = 1;
+            // 
+            // Message
+            // 
+            this.Message.DataPropertyName = "Text";
+            this.Message.HeaderText = "Message";
+            this.Message.Name = "Message";
+            this.Message.ReadOnly = true;
+            // 
+            // SentDate
+            // 
+            this.SentDate.DataPropertyName = "CreatedDate";
+            this.SentDate.HeaderText = "SentDate";
+            this.SentDate.Name = "SentDate";
+            this.SentDate.ReadOnly = true;
             // 
             // btnSend
             // 
@@ -74,18 +91,6 @@ namespace ZenithFit.WinUI.Messages
             this.lbl.Size = new System.Drawing.Size(133, 13);
             this.lbl.TabIndex = 3;
             this.lbl.Text = "Type your response here...";
-            // 
-            // Message
-            // 
-            this.Message.DataPropertyName = "Text";
-            this.Message.HeaderText = "Message";
-            this.Message.Name = "Message";
-            // 
-            // SentDate
-            // 
-            this.SentDate.DataPropertyName = "CreatedDate";
-            this.SentDate.HeaderText = "SentDate";
-            this.SentDate.Name = "SentDate";
             // 
             // frmMessagesDetails
             // 

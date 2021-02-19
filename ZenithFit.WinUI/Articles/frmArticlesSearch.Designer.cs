@@ -30,6 +30,13 @@ namespace ZenithFit.WinUI.Articles
         private void InitializeComponent()
         {
             this.dgvArticles = new System.Windows.Forms.DataGridView();
+            this.ArticleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArticleCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArticlePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArticlePicture = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArticleStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArticleCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArticleManufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbArticleCategories = new System.Windows.Forms.ComboBox();
             this.cmbArticleManufacturers = new System.Windows.Forms.ComboBox();
             this.txtArticleName = new System.Windows.Forms.TextBox();
@@ -39,18 +46,13 @@ namespace ZenithFit.WinUI.Articles
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.ArticleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArticleCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArticlePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArticlePicture = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArticleStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArticleCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArticleManufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticles)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArticles
             // 
+            this.dgvArticles.AllowUserToAddRows = false;
+            this.dgvArticles.AllowUserToDeleteRows = false;
             this.dgvArticles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ArticleName,
@@ -62,8 +64,58 @@ namespace ZenithFit.WinUI.Articles
             this.ArticleManufacturer});
             this.dgvArticles.Location = new System.Drawing.Point(12, 123);
             this.dgvArticles.Name = "dgvArticles";
+            this.dgvArticles.ReadOnly = true;
             this.dgvArticles.Size = new System.Drawing.Size(776, 261);
             this.dgvArticles.TabIndex = 0;
+            // 
+            // ArticleName
+            // 
+            this.ArticleName.DataPropertyName = "ArticleName";
+            this.ArticleName.HeaderText = "Name";
+            this.ArticleName.Name = "ArticleName";
+            this.ArticleName.ReadOnly = true;
+            // 
+            // ArticleCode
+            // 
+            this.ArticleCode.DataPropertyName = "ArticleCode";
+            this.ArticleCode.HeaderText = "Code";
+            this.ArticleCode.Name = "ArticleCode";
+            this.ArticleCode.ReadOnly = true;
+            // 
+            // ArticlePrice
+            // 
+            this.ArticlePrice.DataPropertyName = "ArticlePrice";
+            this.ArticlePrice.HeaderText = "Price";
+            this.ArticlePrice.Name = "ArticlePrice";
+            this.ArticlePrice.ReadOnly = true;
+            // 
+            // ArticlePicture
+            // 
+            this.ArticlePicture.DataPropertyName = "ArticlePicture";
+            this.ArticlePicture.HeaderText = "Picture";
+            this.ArticlePicture.Name = "ArticlePicture";
+            this.ArticlePicture.ReadOnly = true;
+            // 
+            // ArticleStatus
+            // 
+            this.ArticleStatus.DataPropertyName = "ArticleStatus";
+            this.ArticleStatus.HeaderText = "Status";
+            this.ArticleStatus.Name = "ArticleStatus";
+            this.ArticleStatus.ReadOnly = true;
+            // 
+            // ArticleCategory
+            // 
+            this.ArticleCategory.DataPropertyName = "CategoryName";
+            this.ArticleCategory.HeaderText = "Category";
+            this.ArticleCategory.Name = "ArticleCategory";
+            this.ArticleCategory.ReadOnly = true;
+            // 
+            // ArticleManufacturer
+            // 
+            this.ArticleManufacturer.DataPropertyName = "ManufacturerName";
+            this.ArticleManufacturer.HeaderText = "Manufacturer";
+            this.ArticleManufacturer.Name = "ArticleManufacturer";
+            this.ArticleManufacturer.ReadOnly = true;
             // 
             // cmbArticleCategories
             // 
@@ -140,48 +192,6 @@ namespace ZenithFit.WinUI.Articles
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // ArticleName
-            // 
-            this.ArticleName.DataPropertyName = "ArticleName";
-            this.ArticleName.HeaderText = "Name";
-            this.ArticleName.Name = "ArticleName";
-            // 
-            // ArticleCode
-            // 
-            this.ArticleCode.DataPropertyName = "ArticleCode";
-            this.ArticleCode.HeaderText = "Code";
-            this.ArticleCode.Name = "ArticleCode";
-            // 
-            // ArticlePrice
-            // 
-            this.ArticlePrice.DataPropertyName = "ArticlePrice";
-            this.ArticlePrice.HeaderText = "Price";
-            this.ArticlePrice.Name = "ArticlePrice";
-            // 
-            // ArticlePicture
-            // 
-            this.ArticlePicture.DataPropertyName = "ArticlePicture";
-            this.ArticlePicture.HeaderText = "Picture";
-            this.ArticlePicture.Name = "ArticlePicture";
-            // 
-            // ArticleStatus
-            // 
-            this.ArticleStatus.DataPropertyName = "ArticleStatus";
-            this.ArticleStatus.HeaderText = "Status";
-            this.ArticleStatus.Name = "ArticleStatus";
-            // 
-            // ArticleCategory
-            // 
-            this.ArticleCategory.DataPropertyName = "CategoryName";
-            this.ArticleCategory.HeaderText = "Category";
-            this.ArticleCategory.Name = "ArticleCategory";
-            // 
-            // ArticleManufacturer
-            // 
-            this.ArticleManufacturer.DataPropertyName = "ManufacturerName";
-            this.ArticleManufacturer.HeaderText = "Manufacturer";
-            this.ArticleManufacturer.Name = "ArticleManufacturer";
             // 
             // frmArticlesSearch
             // 

@@ -52,6 +52,8 @@ namespace ZenithFit.WinUI.Clients
             // 
             // dgvCustomers
             // 
+            this.dgvCustomers.AllowUserToAddRows = false;
+            this.dgvCustomers.AllowUserToDeleteRows = false;
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FirstName,
@@ -64,6 +66,7 @@ namespace ZenithFit.WinUI.Clients
             this.OrdersComplete});
             this.dgvCustomers.Location = new System.Drawing.Point(12, 102);
             this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.ReadOnly = true;
             this.dgvCustomers.Size = new System.Drawing.Size(847, 282);
             this.dgvCustomers.TabIndex = 0;
             // 
@@ -72,48 +75,56 @@ namespace ZenithFit.WinUI.Clients
             this.FirstName.DataPropertyName = "ClientFirstName";
             this.FirstName.HeaderText = "FirstName";
             this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
             // 
             // LastName
             // 
             this.LastName.DataPropertyName = "ClientLastName";
             this.LastName.HeaderText = "LastName";
             this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
             // 
             // RegisteredDate
             // 
             this.RegisteredDate.DataPropertyName = "ClientRegisterDate";
             this.RegisteredDate.HeaderText = "RegisteredDate";
             this.RegisteredDate.Name = "RegisteredDate";
+            this.RegisteredDate.ReadOnly = true;
             // 
             // Email
             // 
             this.Email.DataPropertyName = "ClientEmail";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // Phone
             // 
             this.Phone.DataPropertyName = "ClientPhone";
             this.Phone.HeaderText = "Phone";
             this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
             // 
             // Username
             // 
             this.Username.DataPropertyName = "ClientUsername";
             this.Username.HeaderText = "Username";
             this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
             // 
             // RatingsDone
             // 
             this.RatingsDone.DataPropertyName = "NumberOfRatings";
             this.RatingsDone.HeaderText = "RatingsDone";
             this.RatingsDone.Name = "RatingsDone";
+            this.RatingsDone.ReadOnly = true;
             // 
             // OrdersComplete
             // 
             this.OrdersComplete.DataPropertyName = "NumberOfOrders";
             this.OrdersComplete.HeaderText = "OrdersComplete";
             this.OrdersComplete.Name = "OrdersComplete";
+            this.OrdersComplete.ReadOnly = true;
             // 
             // txtBoxFirstName
             // 

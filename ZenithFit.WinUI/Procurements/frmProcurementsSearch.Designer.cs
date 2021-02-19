@@ -38,7 +38,6 @@ namespace ZenithFit.WinUI.Procurements
             this.dtpDate2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvProcurements = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.ProcurementID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProcurementNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProcurementDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +48,7 @@ namespace ZenithFit.WinUI.Procurements
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ContactPerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ContactPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcurementDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcurements)).BeginInit();
             this.SuspendLayout();
@@ -121,6 +121,8 @@ namespace ZenithFit.WinUI.Procurements
             // 
             // dgvProcurements
             // 
+            this.dgvProcurements.AllowUserToAddRows = false;
+            this.dgvProcurements.AllowUserToDeleteRows = false;
             this.dgvProcurements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProcurements.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProcurementID,
@@ -135,9 +137,81 @@ namespace ZenithFit.WinUI.Procurements
             this.ContactPhone});
             this.dgvProcurements.Location = new System.Drawing.Point(12, 71);
             this.dgvProcurements.Name = "dgvProcurements";
+            this.dgvProcurements.ReadOnly = true;
             this.dgvProcurements.Size = new System.Drawing.Size(923, 174);
             this.dgvProcurements.TabIndex = 8;
             this.dgvProcurements.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvProcurements_MouseDoubleClick);
+            // 
+            // ProcurementID
+            // 
+            this.ProcurementID.DataPropertyName = "ProcurementID";
+            this.ProcurementID.HeaderText = "ProcurementID";
+            this.ProcurementID.Name = "ProcurementID";
+            this.ProcurementID.ReadOnly = true;
+            this.ProcurementID.Visible = false;
+            // 
+            // ProcurementNumber
+            // 
+            this.ProcurementNumber.DataPropertyName = "ProcurementNumber";
+            this.ProcurementNumber.HeaderText = "Procurement No.";
+            this.ProcurementNumber.Name = "ProcurementNumber";
+            this.ProcurementNumber.ReadOnly = true;
+            // 
+            // ProcurementDate
+            // 
+            this.ProcurementDate.DataPropertyName = "ProcurementDate";
+            this.ProcurementDate.HeaderText = "Procurement date";
+            this.ProcurementDate.Name = "ProcurementDate";
+            this.ProcurementDate.ReadOnly = true;
+            // 
+            // ProcurementAccountAmount
+            // 
+            this.ProcurementAccountAmount.DataPropertyName = "ProcurementAccountAmount";
+            this.ProcurementAccountAmount.HeaderText = "Total value";
+            this.ProcurementAccountAmount.Name = "ProcurementAccountAmount";
+            this.ProcurementAccountAmount.ReadOnly = true;
+            // 
+            // ProcurementTax
+            // 
+            this.ProcurementTax.DataPropertyName = "ProcurementTax";
+            this.ProcurementTax.HeaderText = "Tax amount";
+            this.ProcurementTax.Name = "ProcurementTax";
+            this.ProcurementTax.ReadOnly = true;
+            // 
+            // ProcurementNote
+            // 
+            this.ProcurementNote.DataPropertyName = "ProcurementNote";
+            this.ProcurementNote.HeaderText = "Note";
+            this.ProcurementNote.Name = "ProcurementNote";
+            this.ProcurementNote.ReadOnly = true;
+            // 
+            // WarehouseName
+            // 
+            this.WarehouseName.DataPropertyName = "WarehouseName";
+            this.WarehouseName.HeaderText = "Warehouse";
+            this.WarehouseName.Name = "WarehouseName";
+            this.WarehouseName.ReadOnly = true;
+            // 
+            // SupplierName
+            // 
+            this.SupplierName.DataPropertyName = "SupplierName";
+            this.SupplierName.HeaderText = "Supplier";
+            this.SupplierName.Name = "SupplierName";
+            this.SupplierName.ReadOnly = true;
+            // 
+            // ContactPerson
+            // 
+            this.ContactPerson.DataPropertyName = "ContactPerson";
+            this.ContactPerson.HeaderText = "Contact";
+            this.ContactPerson.Name = "ContactPerson";
+            this.ContactPerson.ReadOnly = true;
+            // 
+            // ContactPhone
+            // 
+            this.ContactPhone.DataPropertyName = "ContactPhone";
+            this.ContactPhone.HeaderText = "Contact Phone";
+            this.ContactPhone.Name = "ContactPhone";
+            this.ContactPhone.ReadOnly = true;
             // 
             // label4
             // 
@@ -147,67 +221,6 @@ namespace ZenithFit.WinUI.Procurements
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Details";
-            // 
-            // ProcurementID
-            // 
-            this.ProcurementID.DataPropertyName = "ProcurementID";
-            this.ProcurementID.HeaderText = "ProcurementID";
-            this.ProcurementID.Name = "ProcurementID";
-            this.ProcurementID.Visible = false;
-            // 
-            // ProcurementNumber
-            // 
-            this.ProcurementNumber.DataPropertyName = "ProcurementNumber";
-            this.ProcurementNumber.HeaderText = "Procurement No.";
-            this.ProcurementNumber.Name = "ProcurementNumber";
-            // 
-            // ProcurementDate
-            // 
-            this.ProcurementDate.DataPropertyName = "ProcurementDate";
-            this.ProcurementDate.HeaderText = "Procurement date";
-            this.ProcurementDate.Name = "ProcurementDate";
-            // 
-            // ProcurementAccountAmount
-            // 
-            this.ProcurementAccountAmount.DataPropertyName = "ProcurementAccountAmount";
-            this.ProcurementAccountAmount.HeaderText = "Total value";
-            this.ProcurementAccountAmount.Name = "ProcurementAccountAmount";
-            // 
-            // ProcurementTax
-            // 
-            this.ProcurementTax.DataPropertyName = "ProcurementTax";
-            this.ProcurementTax.HeaderText = "Tax amount";
-            this.ProcurementTax.Name = "ProcurementTax";
-            // 
-            // ProcurementNote
-            // 
-            this.ProcurementNote.DataPropertyName = "ProcurementNote";
-            this.ProcurementNote.HeaderText = "Note";
-            this.ProcurementNote.Name = "ProcurementNote";
-            // 
-            // WarehouseName
-            // 
-            this.WarehouseName.DataPropertyName = "WarehouseName";
-            this.WarehouseName.HeaderText = "Warehouse";
-            this.WarehouseName.Name = "WarehouseName";
-            // 
-            // SupplierName
-            // 
-            this.SupplierName.DataPropertyName = "SupplierName";
-            this.SupplierName.HeaderText = "Supplier";
-            this.SupplierName.Name = "SupplierName";
-            // 
-            // ContactPerson
-            // 
-            this.ContactPerson.DataPropertyName = "ContactPerson";
-            this.ContactPerson.HeaderText = "Contact";
-            this.ContactPerson.Name = "ContactPerson";
-            // 
-            // ContactPhone
-            // 
-            this.ContactPhone.DataPropertyName = "ContactPhone";
-            this.ContactPhone.HeaderText = "Contact Phone";
-            this.ContactPhone.Name = "ContactPhone";
             // 
             // frmProcurementsSearch
             // 

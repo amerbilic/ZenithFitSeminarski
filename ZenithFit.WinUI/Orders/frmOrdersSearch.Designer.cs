@@ -30,9 +30,6 @@ namespace ZenithFit.WinUI.Orders
         private void InitializeComponent()
         {
             this.dgvOrders = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtOrderNumber = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.OrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,11 +39,16 @@ namespace ZenithFit.WinUI.Orders
             this.OrderPriceTax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WarehouseId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClientId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtOrderNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvOrders
             // 
+            this.dgvOrders.AllowUserToAddRows = false;
+            this.dgvOrders.AllowUserToDeleteRows = false;
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrderId,
@@ -60,8 +62,72 @@ namespace ZenithFit.WinUI.Orders
             this.ClientId});
             this.dgvOrders.Location = new System.Drawing.Point(12, 82);
             this.dgvOrders.Name = "dgvOrders";
+            this.dgvOrders.ReadOnly = true;
             this.dgvOrders.Size = new System.Drawing.Size(880, 256);
             this.dgvOrders.TabIndex = 0;
+            // 
+            // OrderId
+            // 
+            this.OrderId.DataPropertyName = "OrderId";
+            this.OrderId.HeaderText = "OrderId";
+            this.OrderId.Name = "OrderId";
+            this.OrderId.ReadOnly = true;
+            // 
+            // OrderNumber
+            // 
+            this.OrderNumber.DataPropertyName = "OrderNumber";
+            this.OrderNumber.HeaderText = "OrderNumber";
+            this.OrderNumber.Name = "OrderNumber";
+            this.OrderNumber.ReadOnly = true;
+            // 
+            // OrderDate
+            // 
+            this.OrderDate.DataPropertyName = "OrderDate";
+            this.OrderDate.HeaderText = "OrderDate";
+            this.OrderDate.Name = "OrderDate";
+            this.OrderDate.ReadOnly = true;
+            // 
+            // OrderStatus
+            // 
+            this.OrderStatus.DataPropertyName = "OrderStatus";
+            this.OrderStatus.HeaderText = "OrderStatus";
+            this.OrderStatus.Name = "OrderStatus";
+            this.OrderStatus.ReadOnly = true;
+            // 
+            // OrderCancelled
+            // 
+            this.OrderCancelled.DataPropertyName = "OrderCancelled";
+            this.OrderCancelled.HeaderText = "OrderCancelled";
+            this.OrderCancelled.Name = "OrderCancelled";
+            this.OrderCancelled.ReadOnly = true;
+            // 
+            // OrderPriceNoTax
+            // 
+            this.OrderPriceNoTax.DataPropertyName = "OrderPriceNoTax";
+            this.OrderPriceNoTax.HeaderText = "OrderPriceNoTax";
+            this.OrderPriceNoTax.Name = "OrderPriceNoTax";
+            this.OrderPriceNoTax.ReadOnly = true;
+            // 
+            // OrderPriceTax
+            // 
+            this.OrderPriceTax.DataPropertyName = "OrderPriceTax";
+            this.OrderPriceTax.HeaderText = "OrderPriceTax";
+            this.OrderPriceTax.Name = "OrderPriceTax";
+            this.OrderPriceTax.ReadOnly = true;
+            // 
+            // WarehouseId
+            // 
+            this.WarehouseId.DataPropertyName = "WarehouseId";
+            this.WarehouseId.HeaderText = "WarehouseId";
+            this.WarehouseId.Name = "WarehouseId";
+            this.WarehouseId.ReadOnly = true;
+            // 
+            // ClientId
+            // 
+            this.ClientId.DataPropertyName = "ClientId";
+            this.ClientId.HeaderText = "ClientId";
+            this.ClientId.Name = "ClientId";
+            this.ClientId.ReadOnly = true;
             // 
             // btnSearch
             // 
@@ -88,60 +154,6 @@ namespace ZenithFit.WinUI.Orders
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Order number";
-            // 
-            // OrderId
-            // 
-            this.OrderId.DataPropertyName = "OrderId";
-            this.OrderId.HeaderText = "OrderId";
-            this.OrderId.Name = "OrderId";
-            // 
-            // OrderNumber
-            // 
-            this.OrderNumber.DataPropertyName = "OrderNumber";
-            this.OrderNumber.HeaderText = "OrderNumber";
-            this.OrderNumber.Name = "OrderNumber";
-            // 
-            // OrderDate
-            // 
-            this.OrderDate.DataPropertyName = "OrderDate";
-            this.OrderDate.HeaderText = "OrderDate";
-            this.OrderDate.Name = "OrderDate";
-            // 
-            // OrderStatus
-            // 
-            this.OrderStatus.DataPropertyName = "OrderStatus";
-            this.OrderStatus.HeaderText = "OrderStatus";
-            this.OrderStatus.Name = "OrderStatus";
-            // 
-            // OrderCancelled
-            // 
-            this.OrderCancelled.DataPropertyName = "OrderCancelled";
-            this.OrderCancelled.HeaderText = "OrderCancelled";
-            this.OrderCancelled.Name = "OrderCancelled";
-            // 
-            // OrderPriceNoTax
-            // 
-            this.OrderPriceNoTax.DataPropertyName = "OrderPriceNoTax";
-            this.OrderPriceNoTax.HeaderText = "OrderPriceNoTax";
-            this.OrderPriceNoTax.Name = "OrderPriceNoTax";
-            // 
-            // OrderPriceTax
-            // 
-            this.OrderPriceTax.DataPropertyName = "OrderPriceTax";
-            this.OrderPriceTax.HeaderText = "OrderPriceTax";
-            this.OrderPriceTax.Name = "OrderPriceTax";
-            // 
-            // WarehouseId
-            // 
-            this.WarehouseId.DataPropertyName = "WarehouseId";
-            this.WarehouseId.HeaderText = "WarehouseId";
-            this.WarehouseId.Name = "WarehouseId";
-            // 
-            // ClientId
-            // 
-            this.ClientId.DataPropertyName = "ClientId";
-            this.ClientId.HeaderText = "ClientId";
-            this.ClientId.Name = "ClientId";
             // 
             // frmOrdersSearch
             // 
