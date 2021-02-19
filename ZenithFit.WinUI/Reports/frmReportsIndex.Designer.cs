@@ -54,10 +54,11 @@ namespace ZenithFit.WinUI.Reports
             // 
             this.btnOrders.Location = new System.Drawing.Point(263, 13);
             this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(110, 37);
+            this.btnOrders.Size = new System.Drawing.Size(146, 37);
             this.btnOrders.TabIndex = 1;
-            this.btnOrders.Text = "Most commented";
+            this.btnOrders.Text = "Most commented articles";
             this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // dataGridView1
             // 
@@ -100,6 +101,7 @@ namespace ZenithFit.WinUI.Reports
             this.button2.TabIndex = 11;
             this.button2.Text = "Best clients";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmReportsIndex
             // 
