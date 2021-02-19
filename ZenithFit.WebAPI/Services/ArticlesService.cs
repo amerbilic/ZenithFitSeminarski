@@ -37,7 +37,7 @@ namespace ZenithFit.WebAPI.Services
             }
             if (!string.IsNullOrWhiteSpace(search?.ArticleCode))
             {
-                query = query.Where(x => x.ArticleCode == search.ArticleCode);
+                query = query.Where(x => x.ArticleCode.StartsWith(search.ArticleCode));
             }
 
             query = query.OrderBy(x => x.ArticleName);

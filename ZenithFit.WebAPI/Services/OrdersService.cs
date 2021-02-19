@@ -20,7 +20,7 @@ namespace ZenithFit.WebAPI.Services
 
             if(!string.IsNullOrWhiteSpace(search?.OrderNumber))
             {
-                query = _context.Orders.Where(x => x.OrderNumber == search.OrderNumber);
+                query = query.Where(x => x.OrderNumber.StartsWith(search.OrderNumber));
             }
 
             var list = query.ToList();
