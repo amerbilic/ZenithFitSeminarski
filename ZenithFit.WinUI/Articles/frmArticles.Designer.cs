@@ -122,7 +122,7 @@ namespace ZenithFit.WinUI.Articles
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(187, 301);
+            this.btnSubmit.Location = new System.Drawing.Point(290, 204);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 30);
             this.btnSubmit.TabIndex = 16;
@@ -193,7 +193,7 @@ namespace ZenithFit.WinUI.Articles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 343);
+            this.ClientSize = new System.Drawing.Size(380, 343);
             this.Controls.Add(this.pbArticles);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtImageInput);
